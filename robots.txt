@@ -1,1 +1,1 @@
-Sitemap: https://icygs.github.io/dnscioly/sitemap.xml
+Sitemap: https://icygs.github.io/dnscioly-frontend/sitemap.xml
