@@ -6,8 +6,8 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: fastpages
-description: An easy to use blogging platform with support for Jupyter Notebooks.
+title: Del Norte Science Olympiad
+description: SciOly team from San Diego, California (South)
 github_username: icyGS
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "dnscioly-frontend"
@@ -34,13 +34,13 @@ url: "https://icyGS.github.io" # the base hostname & protocol for your site, e.g
 #
 # 3. You must replace the parameter `baseurl` in _action_files/settings.ini with the same value as you set here but WITHOUT QUOTES.
 #
-baseurl: "/dnscioly-frontend" # the subpath of your site, e.g. "/blog".
+baseurl: "/dnscioly" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
 minima:
   social_links:
-    twitter: fastdotai
-    github: fastai
+    instagram: dnscioly
+    github: icyGS
 
 # Set this to true to get LaTeX math equation support
 use_math: 
@@ -49,7 +49,7 @@ use_math:
 show_description: true
 
 # Set this to true to display image previews on home page, if they exist
-show_image: false
+show_image: true
 
 # Set this to true to turn on annotations with hypothes.is (https://web.hypothes.is/)
 annotations: false
@@ -72,9 +72,6 @@ include:
 # This specifies what badges are turned on by default for notebook posts.
 default_badges:
   github: true
-  binder: true
-  colab: true
-  deepnote: true
 
 # Escape HTML in post descriptions
 html_escape:
