@@ -5,12 +5,116 @@ image: images/logo.png
 ---
 <html>
 
+    <head>
+        <style>
+          body {
+            font-family: "Lato", sans-serif;
+          }
+
+          /* Margin for styling according to nav */
+          .main {
+            margin-left: 210px; /* Same as the width of the sidenav */
+          }
+
+          /* Styling for the images in slides */
+          .mySlides {
+              display:none;
+              margin-left:5%;
+          }
+          /* Actual block of navbar */
+          .sidenav {
+                  height: 100%;
+                  width: 200px;
+                  position: fixed;
+                  z-index: 1;
+                  top: 0;
+                  left: 0;
+                  background-color: rgb(56, 121, 219);
+                  overflow-x: hidden;
+                  padding-top: 20px;
+                }
+                
+                /* Navbar Links/Items */
+                .sidenav a {
+                  padding: 6px 6px 6px 32px;
+                  text-decoration: none;
+                  font-size: 25px;
+                  color: #ffffff;
+                  display: block;
+                }
+                
+                /* Hover options for links */
+                .sidenav a:hover {
+                  color: #aaaab1;
+                }
+                
+                /* Margin for styling according to nav */
+                .main {
+                  margin-left: 210px; /* Same as the width of the sidenav */
+                }
+                
+                /* styling according to screen */
+                @media screen and (max-height: 450px) {
+                  .sidenav {padding-top: 15px;}
+                  .sidenav a {font-size: 18px;}
+                }
+                
+                /* Logo Styling mainly */
+                img{
+                    margin-left:10px;
+                }
+
+                .newbutton{
+                    margin-top: 5px;
+                }
+        </style>
+    </head>
+
 <body style="background-image: linear-gradient(to right, rgb(49, 63, 212) , rgb(14, 132, 87));">
     <h1 align="center">
         <b>
             Del Norte Science Olympiad
         </b>
     </h1>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Beginning of main body -->
+        <div class="main">
+          <h2>DNHS Science Olympiad Website</h2>
+          <br>
+          <h4>Registration for 2022-2023 season is OPEN!! Classes will be held both online and in person, depending on your coach's preference.</3>
+          <br>
+        </div>
+
+        <!-- Slideshow -->
+        <div class="w3-content w3-display-container" style = "margin-left: 20%">
+            <a href='https://postimages.org/' target='_blank'><img class="mySlides" src='https://i.postimg.cc/TY3nFwhq/Screen-Shot-2022-10-23-at-11-20-35-PM.png' border='0' alt='Screen-Shot-2022-10-23-at-11-20-35-PM'/></a>
+            <a href='https://postimages.org/' target='_blank'><img class="mySlides" src='https://i.postimg.cc/9MHGnYqr/Screen-Shot-2022-10-23-at-11-20-30-PM.png' border='0' alt='Screen-Shot-2022-10-23-at-11-20-30-PM'/></a>
+            <img class="mySlides" src="https://www.spsnational.org/sites/default/files/images/publications/observer/2021/Fall/Interactions_Olympiad3-web.jpg" style="width:90%; height: 70%;">
+          
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+          
+        <!-- Slideshow code -->
+        <script>
+          var slideIndex = 1;
+          showDivs(slideIndex);
+          
+          function plusDivs(n) {
+            showDivs(slideIndex += n);
+          }
+          
+          function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+            }
+            x[slideIndex-1].style.display = "block";  
+          }
+        </script>
     <div class="btn-group" style = "width:100%; top:2px; left:2px; position: absolute">
         <a href="@{https://github.com/ProRichyMan/JavaProject1.5}"><img src="https://i.ibb.co/0hLyqc7/scioly.png"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
