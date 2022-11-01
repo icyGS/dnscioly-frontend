@@ -30,8 +30,8 @@
       ,"page2": {
           "title": "Calendar",
           "content": "Official DNHS Science Olympiad Calendar .",
-          "url": "https://icygs.github.io/dnscioly-frontend/calendar",
-          "relUrl": "/calendar",
+          "url": "https://icygs.github.io/dnscioly-frontend/calendar/",
+          "relUrl": "/calendar/",
           "date": ""
       }
       
