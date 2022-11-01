@@ -23,50 +23,50 @@ image: images/logo.png
           }
           /* Actual block of navbar */
           .sidenav {
-                  height: 100%;
-                  width: 200px;
-                  position: fixed;
-                  z-index: 1;
-                  top: 0;
-                  left: 0;
-                  background-color: rgb(56, 121, 219);
-                  overflow-x: hidden;
-                  padding-top: 20px;
-                }
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(56, 121, 219);
+            overflow-x: hidden;
+            padding-top: 20px;
+            }
                 
-                /* Navbar Links/Items */
-                .sidenav a {
-                  padding: 6px 6px 6px 32px;
-                  text-decoration: none;
-                  font-size: 25px;
-                  color: #ffffff;
-                  display: block;
-                }
+            /* Navbar Links/Items */
+            .sidenav a {
+              padding: 6px 6px 6px 32px;
+              text-decoration: none;
+              font-size: 25px;
+              color: #ffffff;
+              display: block;
+            }
                 
-                /* Hover options for links */
-                .sidenav a:hover {
-                  color: #aaaab1;
-                }
+            /* Hover options for links */
+            .sidenav a:hover {
+              color: #aaaab1;
+            }
                 
                 /* Margin for styling according to nav */
-                .main {
-                  margin-left: 210px; /* Same as the width of the sidenav */
-                }
+            .main {
+              margin-left: 210px; /* Same as the width of the sidenav */
+            }
                 
                 /* styling according to screen */
-                @media screen and (max-height: 450px) {
-                  .sidenav {padding-top: 15px;}
-                  .sidenav a {font-size: 18px;}
-                }
+            @media screen and (max-height: 450px) {
+              .sidenav {padding-top: 15px;}
+              .sidenav a {font-size: 18px;}
+            }
                 
                 /* Logo Styling mainly */
-                img{
-                    margin-left:10px;
-                }
+            img{
+                margin-left:10px;
+            }
 
-                .newbutton{
-                    margin-top: 5px;
-                }
+            .newbutton{
+                margin-top: 5px;
+            }
         </style>
     </head>
 
@@ -115,43 +115,10 @@ image: images/logo.png
             x[slideIndex-1].style.display = "block";  
           }
         </script>
-    <div class="btn-group" style = "width:100%; top:2px; left:2px; position: absolute">
-        <a href="@{https://github.com/ProRichyMan/JavaProject1.5}"><img src="https://i.ibb.co/0hLyqc7/scioly.png"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-
-        <div class="collapse navbar-collapse newbutton" id="navbarHome">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link sidenav" href="@{/}">Home<span class="sr-only"></span></a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="collapse navbar-collapse newbutton" id="navbarHome">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link sidenav" href="@{/}">Calendar<span class="sr-only"></span></a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="collapse navbar-collapse newbutton" id="navbarHome">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link sidenav" href="@{/}">Dashboard<span class="sr-only"></span></a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="collapse navbar-collapse newbutton" id="navbarHome">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link sidenav" href="@{/}">Inbox<span class="sr-only"></span></a>
-                </li>
-            </ul>
-        </div>
-</body>
-</html>
+    <li class="sidenav">
+        <img src="https://i.ibb.co/0hLyqc7/scioly.png">
+        <a class="" href="@{/}">Home<span class="sr-only"></span></a>
+        <a class="" href="@{/}">Calendar<span class="sr-only"></span></a>
+        <a class="" href="@{/}">Dashboard<span class="sr-only"></span></a>
+        <a class="" href="@{/}">Inbox<span class="sr-only"></span></a>
+    </li>
