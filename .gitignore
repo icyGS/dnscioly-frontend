@@ -12,3 +12,6 @@ _notebooks/.ipynb_checkpoints
 .netlify
 .tweet-cache
 __pycache__
+2020-02-20-test.md
+settings.ini
+fastai_logo.png
