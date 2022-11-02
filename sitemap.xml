@@ -8,13 +8,13 @@
 <loc>https://icygs.github.io/dnscioly-frontend/about/</loc>
 </url>
 <url>
+<loc>https://icygs.github.io/dnscioly-frontend/blog/</loc>
+</url>
+<url>
 <loc>https://icygs.github.io/dnscioly-frontend/calendar/</loc>
 </url>
 <url>
 <loc>https://icygs.github.io/dnscioly-frontend/dashboard/</loc>
-</url>
-<url>
-<loc>https://icygs.github.io/dnscioly-frontend/</loc>
 </url>
 <url>
 <loc>https://icygs.github.io/dnscioly-frontend/trivia/</loc>
@@ -24,5 +24,9 @@
 </url>
 <url>
 <loc>https://icygs.github.io/dnscioly-frontend/categories/</loc>
+</url>
+<url>
+<loc>https://icygs.github.io/dnscioly-frontend/</loc>
+<lastmod>2022-11-02T14:46:00-05:00</lastmod>
 </url>
 </urlset>
