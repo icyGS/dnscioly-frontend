@@ -38,9 +38,20 @@
   
 
   
+      ,"page3": {
+          "title": "Dashboard",
+          "content": "&lt;!DOCTYPE html&gt; . Dashboard . Login . Username: Password: .",
+          "url": "https://icygs.github.io/dnscioly-frontend/dashboard/",
+          "relUrl": "/dashboard/",
+          "date": ""
+      }
+      
+  
 
   
-      ,"page4": {
+
+  
+      ,"page5": {
           "title": "Trivia Game",
           "content": "How many questions do you want? Submit . . . .",
           "url": "https://icygs.github.io/dnscioly-frontend/trivia/",
@@ -70,7 +81,7 @@
   
 
   
-      ,"page12": {
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://icygs.github.io/dnscioly-frontend/robots.txt",
