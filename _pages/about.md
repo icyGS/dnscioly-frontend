@@ -4,7 +4,7 @@ title: About Del Norte
 permalink: /about/
 ---
 
-Del Norte High School is a public high school in San Diego, California. It is in the Poway Unified School District. Del Norte High School has consistently placed in the top 10 at the Southern California state competition since 2015.
+Del Norte High School is a public high school in San Diego, California. It is in the Poway Unified School District. Del Norte High School has consistently placed in the top 10 at the Southern California state competition since 2015. 
 
 # Results
 
