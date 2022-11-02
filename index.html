@@ -11,11 +11,6 @@ image: images/logo.png
             font-family: "Lato", sans-serif;
           }
 
-          /* Styling for the images in slides */
-          .mySlides {
-              display:none;
-              margin-left:5%;
-          }
           /* Actual block of navbar */
           .sidenav {
             height: 100%;
@@ -42,6 +37,17 @@ image: images/logo.png
             .sidenav a:hover {
               color: #aaaab1;
             }
+
+            /* The dots/bullets/indicators */
+            .dot {
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
                 
                 /* styling according to screen */
             @media screen and (max-height: 450px) {
@@ -54,8 +60,18 @@ image: images/logo.png
                 margin-left:10px;
             }
 
+            /* Fading animation */
+            .fade {
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
             .newbutton{
                 margin-top: 5px;
+            }
+            @keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
             }
         </style>
     </head>
@@ -71,24 +87,36 @@ image: images/logo.png
         <div class="main">
           <h2>DNHS Science Olympiad Website</h2>
           <br>
-          <h4>Registration for 2022-2023 season is OPEN!! Classes will be held both online and in person, depending on your coach's preference.</3>
+          <h4>Registration for 2022-2023 season is OPEN!! Classes will be held both online and in person, depending on your coach's preference.
           <br>
-        </div>
+          <br>
+          <br>
 
         <!-- Slideshow -->
-        <div class="w3-content w3-display-container">
-            <a href='https://postimages.org/' target='_blank'><img class="mySlides" src='https://i.postimg.cc/TY3nFwhq/Screen-Shot-2022-10-23-at-11-20-35-PM.png' border='0' alt='Screen-Shot-2022-10-23-at-11-20-35-PM'/></a>
-            <a href='https://postimages.org/' target='_blank'><img class="mySlides" src='https://i.postimg.cc/9MHGnYqr/Screen-Shot-2022-10-23-at-11-20-30-PM.png' border='0' alt='Screen-Shot-2022-10-23-at-11-20-30-PM'/></a>
-            <img class="mySlides" src="https://www.spsnational.org/sites/default/files/images/publications/observer/2021/Fall/Interactions_Olympiad3-web.jpg" style="width:90%; height: 70%;">
-          
-            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="https://i.postimg.cc/TY3nFwhq/Screen-Shot-2022-10-23-at-11-20-35-PM.png" style="width:829px; height:486px;">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://i.postimg.cc/9MHGnYqr/Screen-Shot-2022-10-23-at-11-20-30-PM.png" style="width:829px; height:486px;">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://www.spsnational.org/sites/default/files/images/publications/observer/2021/Fall/Interactions_Olympiad3-web.jpg" style="width:829px; height:486px;">
+            </div>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
         </div>
           
         <!-- Slideshow code -->
         <script>
           var slideIndex = 1;
           showDivs(slideIndex);
+          showSlides();
+
           
           function plusDivs(n) {
             showDivs(slideIndex += n);
@@ -104,6 +132,23 @@ image: images/logo.png
             }
             x[slideIndex-1].style.display = "block";  
           }
+
+          function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
         </script>
     <li class="sidenav">
         <img src="https://i.ibb.co/0hLyqc7/scioly.png">
