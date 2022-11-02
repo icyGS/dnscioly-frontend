@@ -1,14 +1,16 @@
----
-layout: home
-search_exclude: true
-image: images/logo.png
----
+
 <html>
 
     <head>
         <style>
           body {
             font-family: "Lato", sans-serif;
+          }
+
+
+         /* Margin for styling according to nav */
+          .main {
+            margin-left: 210px; /* Same as the width of the sidenav */
           }
 
           /* Actual block of navbar */
@@ -31,6 +33,10 @@ image: images/logo.png
               font-size: 25px;
               color: #ffffff;
               display: block;
+            }
+
+            .txtcolor{
+                color: white;
             }
                 
             /* Hover options for links */
@@ -56,8 +62,7 @@ image: images/logo.png
             }
                 
                 /* Logo Styling mainly */
-            img{
-                margin-left:10px;
+            .logo{
             }
 
             /* Fading animation */
@@ -66,6 +71,13 @@ image: images/logo.png
                 animation-duration: 1.5s;
             }
 
+            .bruh{
+                align-content:center;
+            }
+
+            .active {
+                background-color: #717171;
+            }
             .newbutton{
                 margin-top: 5px;
             }
@@ -77,17 +89,16 @@ image: images/logo.png
     </head>
 
 <body style="background-image: linear-gradient(to right, rgb(49, 63, 212) , rgb(14, 132, 87));">
-    <h1 align="center">
-        <b>
-            Del Norte Science Olympiad
-        </b>
-    </h1>
     <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Beginning of main body -->
         <div class="main">
-          <h2>DNHS Science Olympiad Website</h2>
+            <h1 align="center">
+                <a class="txtcolor" style="text-align:center; text-size-adjust: 10%;">
+                    Del Norte Science Olympiad
+                </a>
+            </h1>
           <br>
-          <h4>Registration for 2022-2023 season is OPEN!! Classes will be held both online and in person, depending on your coach's preference.
+          <h4 class="txtcolor" style="text-align:center">Registration for 2022-2023 season is OPEN!! Classes will be held both online and in person, depending on your coach's preference.
           <br>
           <br>
           <br>
@@ -95,13 +106,13 @@ image: images/logo.png
         <!-- Slideshow -->
         <div class="slideshow-container">
             <div class="mySlides fade">
-                <img src="https://i.postimg.cc/TY3nFwhq/Screen-Shot-2022-10-23-at-11-20-35-PM.png" style="width:829px; height:486px;">
+                <img class="bruh" src="https://i.postimg.cc/TY3nFwhq/Screen-Shot-2022-10-23-at-11-20-35-PM.png" style="width:70%; height:70%;">
             </div>
             <div class="mySlides fade">
-                <img src="https://i.postimg.cc/9MHGnYqr/Screen-Shot-2022-10-23-at-11-20-30-PM.png" style="width:829px; height:486px;">
+                <img class="bruh" src="https://i.postimg.cc/9MHGnYqr/Screen-Shot-2022-10-23-at-11-20-30-PM.png" style="width:70%; height:70%;">
             </div>
             <div class="mySlides fade">
-                <img src="https://www.spsnational.org/sites/default/files/images/publications/observer/2021/Fall/Interactions_Olympiad3-web.jpg" style="width:829px; height:486px;">
+                <img class="bruh" src="https://www.spsnational.org/sites/default/files/images/publications/observer/2021/Fall/Interactions_Olympiad3-web.jpg" style="width:70%; height:70%;">
             </div>
         </div>
         <br>
@@ -109,6 +120,7 @@ image: images/logo.png
             <span class="dot"></span> 
             <span class="dot"></span> 
             <span class="dot"></span> 
+        </div>
         </div>
           
         <!-- Slideshow code -->
@@ -150,10 +162,9 @@ image: images/logo.png
             setTimeout(showSlides, 5000); // Change image every 5 seconds
         }
         </script>
-    <li class="sidenav">
-        <img src="https://i.ibb.co/0hLyqc7/scioly.png">
+    <div class="sidenav">
+        <a href=""><img class="logo"src="https://i.ibb.co/0hLyqc7/scioly.png"></a>
         <a class="" href="@{/}">Home<span class="sr-only"></span></a>
         <a class="" href="@{/calendar/}">Calendar<span class="sr-only"></span></a>
         <a class="" href="@{/}">Dashboard<span class="sr-only"></span></a>
         <a class="" href="@{/}">Inbox<span class="sr-only"></span></a>
-    </li>
