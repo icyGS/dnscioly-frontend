@@ -57,7 +57,7 @@ permalink: /trivia/
     }
 </script>
 <html>
-    <div class="container" style="position: absolute; font-size: 40px;color: white;">
+    <div class="container" style="position: absolute; font-size: 40px;color: red; left: 600px">
         <label for="number">How many questions do you want?</label>
         <br>
         <input id="number" type="number"/>
