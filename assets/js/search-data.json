@@ -63,6 +63,17 @@
 
   
       ,"page5": {
+          "title": "Roster",
+          "content": "id name email events graduating year .",
+          "url": "https://icygs.github.io/dnscioly-frontend/data/roster",
+          "relUrl": "/data/roster",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page6": {
           "title": "Trivia Game",
           "content": "How many questions do you want? Submit . . . .",
           "url": "https://icygs.github.io/dnscioly-frontend/trivia/",
@@ -81,7 +92,7 @@
   
 
   
-      ,"page9": {
+      ,"page10": {
           "title": "Sign Up",
           "content": "&lt;!DOCTYPE html&gt; . Sign Up . Name: . Password: . Graduating Year: . Email: . Phone Number: . .",
           "url": "https://icygs.github.io/dnscioly-frontend/Sign-Up/",
@@ -94,7 +105,7 @@
   
 
   
-      ,"page11": {
+      ,"page12": {
           "title": "Update User Information",
           "content": "&lt;!DOCTYPE html&gt; . Update User Information . Current Email: . Name: . Password: . Graduating Year: . Email: . Phone Number: . .",
           "url": "https://icygs.github.io/dnscioly-frontend/update-info/",
@@ -114,7 +125,7 @@
   
 
   
-      ,"page15": {
+      ,"page16": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://icygs.github.io/dnscioly-frontend/robots.txt",
