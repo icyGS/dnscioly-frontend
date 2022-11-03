@@ -78,28 +78,48 @@ window.onload = wrap_img;
     <title>Sign Up</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+    <style>
+      .inputText {
+        color: aliceblue;
+      }
+    </style>
   </head>
   <body>
     <form method="POST" id="updateInfoForm">
       <p>
         <label for="name">Name:</label>
-        <input type="text" name="name" id="name" />
+        <input type="text" name="name" id="name" class="inputText" />
       </p>
       <p>
         <label for="password">Password:</label>
-        <input type="password" name="password" id="password" />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="inputText"
+        />
       </p>
       <p>
         <label for="graduatingYear">Graduating Year:</label>
-        <input type="text" name="graduatingYear" id="graduatingYear" />
+        <input
+          type="text"
+          name="graduatingYear"
+          id="graduatingYear"
+          class="inputText"
+        />
       </p>
       <p>
         <label for="email">Old Email:</label>
-        <input type="email" name="email" id="email" />
+        <input type="email" name="email" id="email" class="inputText" />
       </p>
       <p>
         <label for="phoneNumber">Phone Number:</label>
-        <input type="text" name="phoneNumber" id="phoneNumber" />
+        <input
+          type="text"
+          name="phoneNumber"
+          id="phoneNumber"
+          class="inputText"
+        />
       </p>
       <input value="Submit" type="submit" />
     </form>
@@ -108,7 +128,10 @@ window.onload = wrap_img;
         event.preventDefault();
 
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://backend.dnhsscioly.tk/api/student/addStudent");
+        xhr.open(
+          "POST",
+          "https://backend.dnhsscioly.tk/api/student/addStudent"
+        );
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
         const data = new FormData(event.target);
