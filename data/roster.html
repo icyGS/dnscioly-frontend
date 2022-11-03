@@ -63,7 +63,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/dnscioly-frontend/about/">About Del Norte</a><a class="page-link" href="/dnscioly-frontend/calendar/">Calendar</a><a class="page-link" href="/dnscioly-frontend/dashboard/">Dashboard</a><a class="page-link" href="/dnscioly-frontend/data/roster">Roster</a><a class="page-link" href="/dnscioly-frontend/trivia/">Trivia Game</a><a class="page-link" href="/dnscioly-frontend/search/">Search</a><a class="page-link" href="/dnscioly-frontend/Sign-Up/">Sign Up</a><a class="page-link" href="/dnscioly-frontend/categories/">Tags</a><a class="page-link" href="/dnscioly-frontend/update-info/">Update User Information</a></div>
+        <div class="trigger"><a class="page-link" href="/dnscioly-frontend/about/">About Del Norte</a><a class="page-link" href="/dnscioly-frontend/calendar/">Calendar</a><a class="page-link" href="/dnscioly-frontend/dashboard/">Dashboard</a><a class="page-link" href="/dnscioly-frontend/data/events">Roster</a><a class="page-link" href="/dnscioly-frontend/data/roster">Roster</a><a class="page-link" href="/dnscioly-frontend/trivia/">Trivia Game</a><a class="page-link" href="/dnscioly-frontend/search/">Search</a><a class="page-link" href="/dnscioly-frontend/Sign-Up/">Sign Up</a><a class="page-link" href="/dnscioly-frontend/categories/">Tags</a><a class="page-link" href="/dnscioly-frontend/update-info/">Update User Information</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -89,7 +89,7 @@ window.onload = wrap_img;
   const resultContainer = document.getElementById("result");
 
   // prepare fetch options
-  const url = "https://backend.dnhsscioly.tk/";
+  const url = "https://backend.dnhsscioly.tk/api/student/";
 
   const options = {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
@@ -119,17 +119,16 @@ window.onload = wrap_img;
       }
       // valid response will have json data
       response.json().then(data => {
-          console.log(data);
 
 
           for (const row of data) {
-            console.log(row);
 
             const tr = document.createElement("tr");
 
             const id = document.createElement("td");
             const name = document.createElement("td");
             const email = document.createElement("td");
+
             const event = document.createElement("td");
             event.innerHTML = row.event;
               const event_select = document.createElement("select");
@@ -142,6 +141,8 @@ window.onload = wrap_img;
               const event_button = document.createElement('button');
                 event_button.innerHTML = "submit";
                 event.appendChild(event_button);
+
+              
             const graduation = document.createElement("td");
             
 
@@ -152,6 +153,8 @@ window.onload = wrap_img;
 
             tr.appendChild(id);
             tr.appendChild(name);
+
+            tr.appendChild(email);
             tr.appendChild(event);
             tr.appendChild(graduation);
 
