@@ -51,7 +51,7 @@ title: Cool Questions
                 document.getElementById('correct').innerHTML = "You got " + correct + " questions correct out of " + count;
             }
             else {
-                document.getElementById('answer').innerHTML = "Nice Try!";
+                document.getElementById('answer').innerHTML = "You Stink!";
                 document.getElementById('score').innerHTML = "Your score is " + score + "/" + total;
                 document.getElementById('correct').innerHTML = "Sorry, you have gotten " + correct + " questions correct out of " + count;
             }
