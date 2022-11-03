@@ -4,7 +4,7 @@
         "post0": {
             "title": "Merry Christmas",
             "content": "Merry Christmas Everyone!!! . The following events will be cancelled so be posted for emails from coaches . n/a | . Mariah Carey! .",
-            "url": "https://dnhsscioly.nighthawkcoders.tk/markdown/2022/12/25/christmas.html",
+            "url": "https://icygs.github.io/dnscioly-frontend/markdown/2022/12/25/christmas.html",
             "relUrl": "/markdown/2022/12/25/christmas.html",
             "date": " • Dec 25, 2022"
         }
@@ -15,7 +15,7 @@
         ,"post1": {
             "title": "Cool Questions",
             "content": "How many questions do you want? Submit . . . .",
-            "url": "https://dnhsscioly.nighthawkcoders.tk/markdown/2022/11/03/questions.html",
+            "url": "https://icygs.github.io/dnscioly-frontend/markdown/2022/11/03/questions.html",
             "relUrl": "/markdown/2022/11/03/questions.html",
             "date": " • Nov 3, 2022"
         }
@@ -26,7 +26,7 @@
         ,"post2": {
             "title": "HAPPY HALLOWEEN FROM SCIENCE OLYMPIAD",
             "content": "Happy Halloween Everyone!!! . The following events will be cancelled so be posted for emails from coaches . It’s About Time | Chem Lab | Disease Detectives | . Otherwise everyone have fun and stay safe!! .",
-            "url": "https://dnhsscioly.nighthawkcoders.tk/markdown/2022/10/31/halloween.html",
+            "url": "https://icygs.github.io/dnscioly-frontend/markdown/2022/10/31/halloween.html",
             "relUrl": "/markdown/2022/10/31/halloween.html",
             "date": " • Oct 31, 2022"
         }
@@ -41,7 +41,7 @@
       ,"page1": {
           "title": "About Del Norte",
           "content": "Del Norte High School is a public high school in San Diego, California. It is in the Poway Unified School District. Del Norte High School has consistently placed in the top 10 at the Southern California state competition since 2015. . Results . Season Regional State . 2013 | ? | 10th | . 2014 | ? | N/A | . 2015 | ? | 9th | . 2016 | 2nd | 8th | . 2017 | 1st | 5th | . 2018 | 2nd | 7th | . 2019 | 2nd | 7th | . 2020 | N/A | N/A | . 2021 | 3rd | 19th | . 2022 | 3rd | 13th | . Future Competitions . Del Norte plans to attend BirdSO, as well as some other invitationals this season, stay tuned! .",
-          "url": "https://dnhsscioly.nighthawkcoders.tk/about/",
+          "url": "https://icygs.github.io/dnscioly-frontend/about/",
           "relUrl": "/about/",
           "date": ""
       }
@@ -52,7 +52,7 @@
       ,"page2": {
           "title": "Calendar",
           "content": "Official DNHS Science Olympiad Calendar .",
-          "url": "https://dnhsscioly.nighthawkcoders.tk/calendar/",
+          "url": "https://icygs.github.io/dnscioly-frontend/calendar/",
           "relUrl": "/calendar/",
           "date": ""
       }
@@ -63,7 +63,7 @@
       ,"page3": {
           "title": "Dashboard",
           "content": "&lt;!DOCTYPE html&gt; . Dashboard . Login . Username: Password: .",
-          "url": "https://dnhsscioly.nighthawkcoders.tk/dashboard/",
+          "url": "https://icygs.github.io/dnscioly-frontend/dashboard/",
           "relUrl": "/dashboard/",
           "date": ""
       }
@@ -74,7 +74,7 @@
       ,"page4": {
           "title": "Roster",
           "content": "id name email events graduating year .",
-          "url": "https://dnhsscioly.nighthawkcoders.tk/data/events",
+          "url": "https://icygs.github.io/dnscioly-frontend/data/events",
           "relUrl": "/data/events",
           "date": ""
       }
@@ -87,7 +87,7 @@
       ,"page6": {
           "title": "Roster",
           "content": "id name email events graduating year .",
-          "url": "https://dnhsscioly.nighthawkcoders.tk/data/roster",
+          "url": "https://icygs.github.io/dnscioly-frontend/data/roster",
           "relUrl": "/data/roster",
           "date": ""
       }
@@ -98,7 +98,7 @@
       ,"page7": {
           "title": "Trivia Game",
           "content": "How many questions do you want? Submit . . . .",
-          "url": "https://dnhsscioly.nighthawkcoders.tk/trivia/",
+          "url": "https://icygs.github.io/dnscioly-frontend/trivia/",
           "relUrl": "/trivia/",
           "date": ""
       }
@@ -117,7 +117,7 @@
       ,"page11": {
           "title": "Sign Up",
           "content": "&lt;!DOCTYPE html&gt; . Sign Up . Name: . Password: . Graduating Year: . Email: . Phone Number: . .",
-          "url": "https://dnhsscioly.nighthawkcoders.tk/Sign-Up/",
+          "url": "https://icygs.github.io/dnscioly-frontend/Sign-Up/",
           "relUrl": "/Sign-Up/",
           "date": ""
       }
@@ -130,7 +130,7 @@
       ,"page13": {
           "title": "Update User Information",
           "content": "&lt;!DOCTYPE html&gt; . Update User Information . Current Email: . Name: . Password: . Graduating Year: . Email: . Phone Number: . .",
-          "url": "https://dnhsscioly.nighthawkcoders.tk/update-info/",
+          "url": "https://icygs.github.io/dnscioly-frontend/update-info/",
           "relUrl": "/update-info/",
           "date": ""
       }
@@ -150,7 +150,7 @@
       ,"page17": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
-          "url": "https://dnhsscioly.nighthawkcoders.tk/robots.txt",
+          "url": "https://icygs.github.io/dnscioly-frontend/robots.txt",
           "relUrl": "/robots.txt",
           "date": ""
       }
