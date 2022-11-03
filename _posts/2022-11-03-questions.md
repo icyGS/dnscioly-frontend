@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: Fun
+description: Please use lowercase words in your answers. Number answers are in number form. 
 categories: [markdown]
 title: Cool Questions
 ---
@@ -21,14 +21,14 @@ title: Cool Questions
             return guess === this.answer
         }
     }
-    let q1 = new Jeopardy('What is the biggest planet in the solar system?', 'Jupiter', 2);
-    let q2 = new Jeopardy('What galaxy do we live in?', 'The Milky Way', 1);
-    let q3 = new Jeopardy('What does DNA stand for?', 'Deoxyribonucleic acid', 2);
+    let q1 = new Jeopardy('What is the biggest planet in the solar system?', 'jupiter', 2);
+    let q2 = new Jeopardy('What galaxy do we live in?', 'the Milky Way', 1);
+    let q3 = new Jeopardy('What does DNA stand for?', 'deoxyribonucleic acid', 2);
     let q4 = new Jeopardy('How many bones are in the human body?', '206', 2);
-    let q5 = new Jeopardy('What is the closest planet to the Earth? (on average)', 'Mercury', 2);
-    let q6 = new Jeopardy('Which is the main gas that makes up the atmosphere in the Earth?', 'Nitrogen', 1);
+    let q5 = new Jeopardy('What is the closest planet to the Earth? (on average)', 'mercury', 2);
+    let q6 = new Jeopardy('Which is the main gas that makes up the atmosphere in the Earth?', 'nitrogen', 1);
     let q7 = new Jeopardy('At what temperature are Celsius and Fahrenheit equal?', '40', 1);
-    let q8 = new Jeopardy('What is the largest ocean on Earth?', 'Pacific', 1);
+    let q8 = new Jeopardy('What is the largest ocean on Earth?', 'pacific', 1);
     let q9 = new Jeopardy('How many teeth does an adult human have?', '32',2);
 
 
