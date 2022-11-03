@@ -73,7 +73,7 @@
   
       ,"page4": {
           "title": "Events",
-          "content": "id event name people . id event name people .",
+          "content": "Event lists . B division events . id event name people . C division events . id event name people .",
           "url": "https://icygs.github.io/dnscioly-frontend/data/events",
           "relUrl": "/data/events",
           "date": ""
