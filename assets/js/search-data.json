@@ -63,17 +63,6 @@
 
   
       ,"page5": {
-          "title": "Update User Information",
-          "content": "&lt;!DOCTYPE html&gt; . Update User Information . Name: . Password: . Graduating Year: . Email: . Phone Number: . .",
-          "url": "https://icygs.github.io/dnscioly-frontend/update-info/",
-          "relUrl": "/update-info/",
-          "date": ""
-      }
-      
-  
-
-  
-      ,"page6": {
           "title": "Trivia Game",
           "content": "How many questions do you want? Submit . . . .",
           "url": "https://icygs.github.io/dnscioly-frontend/trivia/",
@@ -89,6 +78,17 @@
   
 
   
+  
+
+  
+      ,"page9": {
+          "title": "Sign Up",
+          "content": "&lt;!DOCTYPE html&gt; . Sign Up . Name: . Password: . Graduating Year: . Email: . Phone Number: . .",
+          "url": "https://icygs.github.io/dnscioly-frontend/Sign-Up/",
+          "relUrl": "/Sign-Up/",
+          "date": ""
+      }
+      
   
 
   
