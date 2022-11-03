@@ -1,0 +1,70 @@
+---
+layout: default
+permalink: /update-info/
+title: Update User Information
+search_exclude: false
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update User Information</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+  </head>
+  <body>
+    <form method="POST" id="updateInfoForm">
+      <p>
+        <label for="currentEmail">Current Email:</label>
+        <input type="text" name="currentEmail" id="currentEmail" />
+      </p>
+      <p>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+      </p>
+      <p>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" />
+      </p>
+      <p>
+        <label for="graduatingYear">Graduating Year:</label>
+        <input type="text" name="graduatingYear" id="graduatingYear" />
+      </p>
+      <p>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" />
+      </p>
+      <p>
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" name="phoneNumber" id="phoneNumber" />
+      </p>
+      <input value="Submit" type="submit" />
+    </form>
+    <script>
+      function submitform(event) {
+        event.preventDefault();
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://backend.dnhsscioly.tk/api/student/updateStudent/");
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+        const data = new FormData(event.target);
+        const userInfo = Object.fromEntries(data.entries());
+
+        userInfo.id = null;
+        userInfo.event = [];
+        userInfo.passwordHash = CryptoJS.MD5(userInfo.password).toString();
+
+        xhr.send(JSON.stringify(userInfo));
+        const form = document.getElementById("updateInfoForm");
+        form.reset();
+      }
+
+      const form = document.getElementById("updateInfoForm");
+      form.addEventListener("submit", submitform);
+    </script>
+  </body>
+</html>
