@@ -20,14 +20,14 @@ permalink: /trivia/
         }
     }
     let q1 = new Jeopardy('What is H2O in daily life?', 'water', 2);
-    let q2 = new Jeopardy('What is the outermost layer of the earth?', 'Crust', 1);
-    let q3 = new Jeopardy('What is the hardness mineral on Mohs Hardness Scale?', 'Diamond', 2);
-    let q4 = new Jeopardy('What is a reaction that loses electrons called?', 'Oxidation', 2);
-    let q5 = new Jeopardy('What is the closest star to the Earth?', 'Sun', 2);
+    let q2 = new Jeopardy('What is the outermost layer of the earth?', 'crust', 1);
+    let q3 = new Jeopardy('What is the hardness mineral on Mohs Hardness Scale?', 'diamond', 2);
+    let q4 = new Jeopardy('What is a reaction that loses electrons called?', 'oxidation', 2);
+    let q5 = new Jeopardy('What is the closest star to the Earth?', 'sun', 2);
     let q6 = new Jeopardy('Who is the founder of his namesake uncertainty principle?', 'Heisenberg', 1);
     let q7 = new Jeopardy('Which number of Kepler\'s Laws states celestial bodies have elliptical orbits?', '1', 1);
-    let q8 = new Jeopardy('What is the largest ocean on Earth?', 'Pacific', 1);
-    let q9 = new Jeopardy('What is the coldest theoretical temperature in the universe?', 'Absolute Zero', 2);
+    let q8 = new Jeopardy('What is the largest ocean on Earth?', 'pacific', 1);
+    let q9 = new Jeopardy('What is the coldest theoretical temperature in the universe?', 'absolute zero', 2);
 
 
     const qarray = [q1, q2, q3, q4, q5, q6, q7, q8, q9]
