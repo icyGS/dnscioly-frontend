@@ -81,6 +81,14 @@
   
 
   
+      ,"page10": {
+          "title": "Update User Information",
+          "content": "&lt;!DOCTYPE html&gt; . Update User Information . Name: . email: . &lt;input value=&quot;Submit&quot; type=&quot;&quot;type&quot; onclick=&quot;submitform()&quot;/&gt; .",
+          "url": "https://icygs.github.io/dnscioly-frontend/update-info/",
+          "relUrl": "/update-info/",
+          "date": ""
+      }
+      
   
 
   
@@ -90,7 +98,10 @@
   
 
   
-      ,"page13": {
+  
+
+  
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://icygs.github.io/dnscioly-frontend/robots.txt",
