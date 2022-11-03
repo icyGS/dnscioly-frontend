@@ -3,7 +3,7 @@ layout: default
 description: Testing the use of displaying frontend API
 categories: [markdown,javascript]
 comments: true
-title: Roster
+title: Events
 permalink: /data/events
 ---
 
@@ -11,13 +11,24 @@ permalink: /data/events
   <thead>
   <tr>
     <th>id</th>
-    <th>name</th>
-    <th>email</th>
-    <th>events</th>
-    <th>graduating year</th>
+    <th>event name</th>
+    <th>people</th>
   </tr>
   </thead>
-  <tbody id = "result">
+  <tbody id = "div_b">
+
+  </tbody>
+</table>
+
+<table>
+  <thead>
+  <tr>
+    <th>id</th>
+    <th>event name</th>
+    <th>people</th>
+  </tr>
+  </thead>
+  <tbody id = "div_c">
 
   </tbody>
 </table>
@@ -28,10 +39,11 @@ permalink: /data/events
 <!-- Script is layed out in a sequence (no function) and will execute when page is loaded -->
 <script>
   // prepare HTML result container for new output
-  const resultContainer = document.getElementById("result");
+  const resultContainerB = document.getElementById("div_b");
+  const resultContainerC = document.getElementById("div_c");
 
   // prepare fetch options
-  const url = "https://backend.dnhsscioly.tk/api/student/";
+  const url = "https://backend.dnhsscioly.tk/api/events/";
 
   const options = {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
@@ -56,7 +68,7 @@ permalink: /data/events
           const td = document.createElement("td");
           td.innerHTML = errorMsg;
           tr.appendChild(td);
-          resultContainer.appendChild(tr);
+          resultContainerB.appendChild(tr);
           return;
       }
       // valid response will have json data
@@ -64,43 +76,32 @@ permalink: /data/events
 
 
           for (const row of data) {
-
+            
             const tr = document.createElement("tr");
 
             const id = document.createElement("td");
-            const name = document.createElement("td");
-            const email = document.createElement("td");
-
             const event = document.createElement("td");
-            event.innerHTML = row.event;
-              const event_select = document.createElement("select");
-                var opt = document.createElement("option");
-                opt.value = "anatomy";
-                opt.innerHTML = "anatomy"
-                event_select.appendChild(opt);
-                event.appendChild(event_select);
-
-              const event_button = document.createElement('button');
-                event_button.innerHTML = "submit";
-                event.appendChild(event_button);
-
+            const people = document.createElement("td");
               
             const graduation = document.createElement("td");
-            
+            let division = row.division;
 
             id.innerHTML = row.id;
-            name.innerHTML = row.name;
-            email.innerHTML = row.email;
-            graduation.innerHTML = row.graduatingYear;
+            event.innerHTML = row.name;
+            people.innerHTML = row.people;
 
             tr.appendChild(id);
-            tr.appendChild(name);
-
-            tr.appendChild(email);
+            
             tr.appendChild(event);
-            tr.appendChild(graduation);
+            tr.appendChild(people);
 
-            resultContainer.appendChild(tr);
+            if (division.match("b")) {
+              console.log(division);
+              resultContainerB.appendChild(tr);
+            } else {
+              resultContainerC.appendChild(tr);
+            }
+            
           }
       })
   })
@@ -111,6 +112,6 @@ permalink: /data/events
     const td = document.createElement("td");
     td.innerHTML = err;
     tr.appendChild(td);
-    resultContainer.appendChild(tr);
+    resultContainerB.appendChild(tr);
   });
 </script>
