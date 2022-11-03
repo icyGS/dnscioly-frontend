@@ -21,15 +21,15 @@ title: Cool Questions
             return guess === this.answer
         }
     }
-    let q1 = new Jeopardy('What is the biggest planet in the solar system?', 'jupiter', 2);
+    let q1 = new Jeopardy('What is the biggest planet in the solar system?', 'jupiter', 1);
     let q2 = new Jeopardy('What galaxy do we live in?', 'the milky way', 1);
-    let q3 = new Jeopardy('What does DNA stand for?', 'deoxyribonucleic acid', 2);
-    let q4 = new Jeopardy('How many bones are in the human body?', '206', 2);
-    let q5 = new Jeopardy('What is the closest planet to the Earth? (on average)', 'mercury', 2);
+    let q3 = new Jeopardy('What does DNA stand for?', 'deoxyribonucleic acid', 1);
+    let q4 = new Jeopardy('How many bones are in the human body?', '206', 1);
+    let q5 = new Jeopardy('What is the closest planet to the Earth? (on average)', 'mercury', 1);
     let q6 = new Jeopardy('Which is the main gas that makes up the atmosphere in the Earth?', 'nitrogen', 1);
     let q7 = new Jeopardy('At what temperature are Celsius and Fahrenheit equal?', '40', 1);
     let q8 = new Jeopardy('What is the largest ocean on Earth?', 'pacific', 1);
-    let q9 = new Jeopardy('How many teeth does an adult human have?', '32',2);
+    let q9 = new Jeopardy('How many teeth does an adult human have?', '32',1);
 
 
     const qarray = [q1, q2, q3, q4, q5, q6, q7, q8, q9]
@@ -51,7 +51,7 @@ title: Cool Questions
                 document.getElementById('correct').innerHTML = "You got " + correct + " questions correct out of " + count;
             }
             else {
-                document.getElementById('answer').innerHTML = "Nice Try!";
+                document.getElementById('answer').innerHTML = "You Stink!";
                 document.getElementById('score').innerHTML = "Your score is " + score + "/" + total;
                 document.getElementById('correct').innerHTML = "Sorry, you have gotten " + correct + " questions correct out of " + count;
             }
@@ -59,8 +59,8 @@ title: Cool Questions
     }
 </script>
 <html>
-    <div class="container" style="position: absolute; font-size: 40px;color: red; left: 600px">
-        <label for="number">How many questions do you want?</label>
+    <div class="container" style="position: absolute; font-size: 40px;color: red; left: 400px">
+        <label for="number">How many questions do you want? (max = 9)</label>
         <br>
         <input id="number" type="number"/>
         <button onclick="QNA(document.getElementById('number').value)">Submit</button>

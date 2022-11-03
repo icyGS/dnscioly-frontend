@@ -41,7 +41,7 @@ permalink: /trivia/
             let guess = prompt(randomValue.question + " Points: " + randomValue.point);
             count = count + 1
             total = total + randomValue.point
-            if (randomValue.CheckAnswer(guess)) {
+            if (randomValue.CheckAnswer(guess.toLowerCase())) {
                 score = score + randomValue.point;
                 correct = correct + 1
                 document.getElementById('answer').innerHTML = "Well Done!";
