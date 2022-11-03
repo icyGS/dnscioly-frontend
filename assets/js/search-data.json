@@ -28,17 +28,6 @@
 
   
       ,"page2": {
-          "title": "Blogs",
-          "content": "Our Various Blogs and Pages .",
-          "url": "https://icygs.github.io/dnscioly-frontend/blog/",
-          "relUrl": "/blog/",
-          "date": ""
-      }
-      
-  
-
-  
-      ,"page3": {
           "title": "Calendar",
           "content": "Official DNHS Science Olympiad Calendar .",
           "url": "https://icygs.github.io/dnscioly-frontend/calendar/",
@@ -49,7 +38,7 @@
   
 
   
-      ,"page4": {
+      ,"page3": {
           "title": "Dashboard",
           "content": "&lt;!DOCTYPE html&gt; . Dashboard . Login . Username: Password: .",
           "url": "https://icygs.github.io/dnscioly-frontend/dashboard/",
@@ -57,6 +46,8 @@
           "date": ""
       }
       
+  
+
   
 
   
