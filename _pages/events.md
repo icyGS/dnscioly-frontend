@@ -4,7 +4,7 @@ description: Testing the use of displaying frontend API
 categories: [markdown,javascript]
 comments: true
 title: Roster
-permalink: /data/roster
+permalink: /data/events
 ---
 
 <table>
