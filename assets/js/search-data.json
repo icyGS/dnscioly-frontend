@@ -129,7 +129,7 @@
   
       ,"page13": {
           "title": "Update User Information",
-          "content": "&lt;!DOCTYPE html&gt; . Update User Information . Current Email: . Name: . Password: . Graduating Year: . Email: . Phone Number: . .",
+          "content": "&lt;!DOCTYPE html&gt; . Update User Information . Current Email: . Name: . Password: . Graduating Year: . Email: . Phone Number: . id name email phone number graduating year . .",
           "url": "https://icygs.github.io/dnscioly-frontend/update-info/",
           "relUrl": "/update-info/",
           "date": ""

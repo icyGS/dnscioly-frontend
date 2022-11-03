@@ -132,6 +132,18 @@ window.onload = wrap_img;
       </p>
       <input value="Submit" type="submit" />
     </form>
+    <table id="updatedStudentTable">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>email</th>
+          <th>phone number</th>
+          <th>graduating year</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
     <script>
       function submitform(event) {
         event.preventDefault();
@@ -153,6 +165,29 @@ window.onload = wrap_img;
         xhr.send(JSON.stringify(userInfo));
         const form = document.getElementById("updateInfoForm");
         form.reset();
+
+        //create table
+        const tr = document.createElement("tr");
+        const id = document.createElement("td");
+        const name = document.createElement("td");
+        const email = document.createElement("td");
+        const phone = document.createElement("td");
+        const graduation = document.createElement("td");
+
+        id.innerHTML = userInfo.id;
+        name.innerHTML = userInfo.name;
+        email.innerHTML = userInfo.email;
+        phone.innerHTML = userInfo.phoneNumber;
+        graduation.innerHTML = userInfo.graduatingYear;
+
+        tr.appendChild(id);
+        tr.appendChild(name);
+        tr.appendChild(email);
+        tr.appendChild(phone);
+        tr.appendChild(graduation);
+
+        const studentDataTable = document.getElementById("updatedStudentTable");
+        studentDataTable.appendChild(tr);
       }
 
       const form = document.getElementById("updateInfoForm");

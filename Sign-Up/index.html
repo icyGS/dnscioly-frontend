@@ -85,7 +85,7 @@ window.onload = wrap_img;
     </style>
   </head>
   <body>
-    <form method="POST" id="updateInfoForm">
+    <form method="POST" id="signupForm">
       <p>
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" class="inputText" />
@@ -142,9 +142,11 @@ window.onload = wrap_img;
         userInfo.passwordHash = CryptoJS.MD5(userInfo.password).toString();
 
         xhr.send(JSON.stringify(userInfo));
+        const form = document.getElementById("signupForm");
+        form.reset();
       }
 
-      const form = document.getElementById("updateInfoForm");
+      const form = document.getElementById("signupForm");
       form.addEventListener("submit", submitform);
     </script>
   </body>
