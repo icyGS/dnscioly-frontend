@@ -12,6 +12,8 @@ search_exclude: false
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
   </head>
   <body>
     <form method="POST" id="updateInfoForm">
@@ -50,6 +52,7 @@ search_exclude: false
 
         userInfo.id = null;
         userInfo.event = [];
+        userInfo.passwordHash = CryptoJS.MD5(userInfo.password).toString();
 
         xhr.send(JSON.stringify(userInfo));
       }
