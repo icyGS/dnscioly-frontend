@@ -111,7 +111,7 @@ window.onload = wrap_img;
         event.preventDefault();
 
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://backend.dnhsscioly.tk/api/student/");
+        xhr.open("POST", "https://backend.dnhsscioly.tk/api/updateStudent/");
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
         const data = new FormData(event.target);
