@@ -86,7 +86,7 @@
   
       ,"page6": {
           "title": "Roster",
-          "content": "id name email events graduating year .",
+          "content": "id name email phone number events graduating year &lt;/tr&gt; &lt;/thead&gt; &lt;/table&gt; .",
           "url": "https://icygs.github.io/dnscioly-frontend/data/roster",
           "relUrl": "/data/roster",
           "date": ""

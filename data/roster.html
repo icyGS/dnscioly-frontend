@@ -75,14 +75,15 @@ window.onload = wrap_img;
     <th>id</th>
     <th>name</th>
     <th>email</th>
+    <th>phone number<th>
     <th>events</th>
     <th>graduating year</th>
-  </tr>
-  </thead>
+  &lt;/tr&gt;
+  &lt;/thead&gt;
   <tbody id="result">
 
   </tbody>
-</table>
+&lt;/table&gt;
 
 <!-- Script is layed out in a sequence (no function) and will execute when page is loaded -->
 <script>
@@ -129,6 +130,7 @@ window.onload = wrap_img;
             const id = document.createElement("td");
             const name = document.createElement("td");
             const email = document.createElement("td");
+            const phone = document.createElement("td");
 
             const event = document.createElement("td");
             event.innerHTML = row.event;
@@ -150,12 +152,14 @@ window.onload = wrap_img;
             id.innerHTML = row.id;
             name.innerHTML = row.name;
             email.innerHTML = row.email;
+            phone.innerHTML = row.phoneNumber;
             graduation.innerHTML = row.graduatingYear;
 
             tr.appendChild(id);
             tr.appendChild(name);
 
             tr.appendChild(email);
+            tr.appendChild(phone)
             tr.appendChild(event);
             tr.appendChild(graduation);
 
@@ -173,7 +177,7 @@ window.onload = wrap_img;
     resultContainer.appendChild(tr);
   });
 </script>
-
+</th></th></tr></thead></table>
 
       </div>
     </main><footer class="site-footer h-card">
