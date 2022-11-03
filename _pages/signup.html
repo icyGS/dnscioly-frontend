@@ -30,7 +30,7 @@ search_exclude: false
         <input type="text" name="graduatingYear" id="graduatingYear" />
       </p>
       <p>
-        <label for="email">Email:</label>
+        <label for="email">Old Email:</label>
         <input type="email" name="email" id="email" />
       </p>
       <p>
@@ -44,7 +44,7 @@ search_exclude: false
         event.preventDefault();
 
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:8098/api/student/addStudent");
+        xhr.open("POST", "https://backend.dnhsscioly.tk/api/student/addStudent");
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
         const data = new FormData(event.target);
