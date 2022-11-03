@@ -116,7 +116,7 @@
   
       ,"page11": {
           "title": "Sign Up",
-          "content": "&lt;!DOCTYPE html&gt; . Sign Up . Name: . Password: . Graduating Year: . Email: . Phone Number: . .",
+          "content": "&lt;!DOCTYPE html&gt; . Sign Up . Name: . Password: . Graduating Year: . Old Email: . Phone Number: . .",
           "url": "https://icygs.github.io/dnscioly-frontend/Sign-Up/",
           "relUrl": "/Sign-Up/",
           "date": ""
