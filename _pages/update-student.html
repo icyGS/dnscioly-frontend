@@ -1,0 +1,43 @@
+---
+layout: default
+permalink: /update-info/
+title: Update User Information
+search_exclude: false
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update User Information</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function submitform() {
+        var xhr = new XMLHttpRequest();
+        xhr.open(form.method, form.action, true);
+        xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+        var userInfoJSON = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+        };
+
+        xhr.send(JSON.stringify(userInfoJSON));
+      }
+    </script>
+    <form action="updateStudent" method="POST" name="updateInfoForm">
+      <p>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+      </p>
+      <p>
+        <label for="email">email:</label>
+        <input type="email" name="email" id="email" />
+      </p>
+
+      <input value="Submit" type=""type" onclick="submitform()"/>
+    </form>
+  </body>
+</html>
