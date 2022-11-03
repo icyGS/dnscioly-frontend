@@ -63,7 +63,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/dnscioly-frontend/about/">About Del Norte</a><a class="page-link" href="/dnscioly-frontend/calendar/">Calendar</a><a class="page-link" href="/dnscioly-frontend/dashboard/">Dashboard</a><a class="page-link" href="/dnscioly-frontend/trivia/">Trivia Game</a><a class="page-link" href="/dnscioly-frontend/search/">Search</a><a class="page-link" href="/dnscioly-frontend/categories/">Tags</a><a class="page-link" href="/dnscioly-frontend/update-info/">Update User Information</a></div>
+        <div class="trigger"><a class="page-link" href="/dnscioly-frontend/about/">About Del Norte</a><a class="page-link" href="/dnscioly-frontend/calendar/">Calendar</a><a class="page-link" href="/dnscioly-frontend/dashboard/">Dashboard</a><a class="page-link" href="/dnscioly-frontend/update-info/">Update User Information</a><a class="page-link" href="/dnscioly-frontend/trivia/">Trivia Game</a><a class="page-link" href="/dnscioly-frontend/search/">Search</a><a class="page-link" href="/dnscioly-frontend/categories/">Tags</a><a class="page-link" href="/dnscioly-frontend/update-info/">Update User Information</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -77,31 +77,55 @@ window.onload = wrap_img;
     <title>Update User Information</title>
   </head>
   <body>
-    <script type="text/javascript">
-      function submitform() {
-        var xhr = new XMLHttpRequest();
-        xhr.open(form.method, form.action, true);
-        xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-        var userInfoJSON = {
-          name: document.getElementById("name").value,
-          email: document.getElementById("email").value,
-        };
-
-        xhr.send(JSON.stringify(userInfoJSON));
-      }
-    </script>
-    <form action="updateStudent" method="POST" name="updateInfoForm">
+    <form method="POST" id="updateInfoForm">
+      <p>
+        <label for="currentEmail">Current Email:</label>
+        <input type="text" name="currentEmail" id="currentEmail" />
+      </p>
       <p>
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" />
       </p>
       <p>
-        <label for="email">email:</label>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" />
+      </p>
+      <p>
+        <label for="graduatingYear">Graduating Year:</label>
+        <input type="text" name="graduatingYear" id="graduatingYear" />
+      </p>
+      <p>
+        <label for="email">Email:</label>
         <input type="email" name="email" id="email" />
       </p>
-
-      <input value="Submit" type=""type" onclick="submitform()"/>
+      <p>
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" name="phoneNumber" id="phoneNumber" />
+      </p>
+      <input value="Submit" type="submit" />
     </form>
+    <script>
+      function submitform(event) {
+        event.preventDefault();
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://localhost:8098/api/student/updateStudent");
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+        const data = new FormData(event.target);
+        const userInfo = Object.fromEntries(data.entries());
+
+        userInfo.id = null;
+        userInfo.event = [];
+
+        xhr.send(JSON.stringify(userInfo));
+        const form = document.getElementById("updateInfoForm");
+        form.reset();
+      }
+
+      const form = document.getElementById("updateInfoForm");
+      form.addEventListener("submit", submitform);
+    </script>
   </body>
 </html>
 

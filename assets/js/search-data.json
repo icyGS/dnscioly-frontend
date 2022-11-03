@@ -63,6 +63,17 @@
 
   
       ,"page5": {
+          "title": "Update User Information",
+          "content": "&lt;!DOCTYPE html&gt; . Update User Information . Name: . Password: . Graduating Year: . Email: . Phone Number: . .",
+          "url": "https://icygs.github.io/dnscioly-frontend/update-info/",
+          "relUrl": "/update-info/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page6": {
           "title": "Trivia Game",
           "content": "How many questions do you want? Submit . . . .",
           "url": "https://icygs.github.io/dnscioly-frontend/trivia/",
@@ -83,9 +94,9 @@
   
 
   
-      ,"page10": {
+      ,"page11": {
           "title": "Update User Information",
-          "content": "&lt;!DOCTYPE html&gt; . Update User Information . Name: . email: . &lt;input value=&quot;Submit&quot; type=&quot;&quot;type&quot; onclick=&quot;submitform()&quot;/&gt; .",
+          "content": "&lt;!DOCTYPE html&gt; . Update User Information . Current Email: . Name: . Password: . Graduating Year: . Email: . Phone Number: . .",
           "url": "https://icygs.github.io/dnscioly-frontend/update-info/",
           "relUrl": "/update-info/",
           "date": ""
@@ -103,7 +114,7 @@
   
 
   
-      ,"page14": {
+      ,"page15": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://icygs.github.io/dnscioly-frontend/robots.txt",
