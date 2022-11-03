@@ -72,8 +72,8 @@
 
   
       ,"page4": {
-          "title": "Roster",
-          "content": "id name email events graduating year .",
+          "title": "Events",
+          "content": "id event name people . id event name people .",
           "url": "https://icygs.github.io/dnscioly-frontend/data/events",
           "relUrl": "/data/events",
           "date": ""

@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Roster</title>
+<title>Events</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Roster" />
+<meta property="og:title" content="Events" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Testing the use of displaying frontend API" />
 <meta property="og:description" content="Testing the use of displaying frontend API" />
@@ -14,9 +14,9 @@
 <meta property="og:url" content="https://icygs.github.io/dnscioly-frontend/data/events" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Roster" />
+<meta property="twitter:title" content="Events" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Testing the use of displaying frontend API","headline":"Roster","url":"https://icygs.github.io/dnscioly-frontend/data/events"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Testing the use of displaying frontend API","headline":"Events","url":"https://icygs.github.io/dnscioly-frontend/data/events"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/dnscioly-frontend/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://icygs.github.io/dnscioly-frontend/feed.xml" /><link rel="shortcut icon" type="image/x-icon" href="/dnscioly-frontend/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -63,7 +63,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/dnscioly-frontend/about/">About Del Norte</a><a class="page-link" href="/dnscioly-frontend/calendar/">Calendar</a><a class="page-link" href="/dnscioly-frontend/dashboard/">Dashboard</a><a class="page-link" href="/dnscioly-frontend/data/events">Roster</a><a class="page-link" href="/dnscioly-frontend/data/roster">Roster</a><a class="page-link" href="/dnscioly-frontend/trivia/">Trivia Game</a><a class="page-link" href="/dnscioly-frontend/search/">Search</a><a class="page-link" href="/dnscioly-frontend/Sign-Up/">Sign Up</a><a class="page-link" href="/dnscioly-frontend/categories/">Tags</a><a class="page-link" href="/dnscioly-frontend/update-info/">Update User Information</a></div>
+        <div class="trigger"><a class="page-link" href="/dnscioly-frontend/about/">About Del Norte</a><a class="page-link" href="/dnscioly-frontend/calendar/">Calendar</a><a class="page-link" href="/dnscioly-frontend/dashboard/">Dashboard</a><a class="page-link" href="/dnscioly-frontend/data/events">Events</a><a class="page-link" href="/dnscioly-frontend/data/roster">Roster</a><a class="page-link" href="/dnscioly-frontend/trivia/">Trivia Game</a><a class="page-link" href="/dnscioly-frontend/search/">Search</a><a class="page-link" href="/dnscioly-frontend/Sign-Up/">Sign Up</a><a class="page-link" href="/dnscioly-frontend/categories/">Tags</a><a class="page-link" href="/dnscioly-frontend/update-info/">Update User Information</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -72,13 +72,24 @@ window.onload = wrap_img;
   <thead>
   <tr>
     <th>id</th>
-    <th>name</th>
-    <th>email</th>
-    <th>events</th>
-    <th>graduating year</th>
+    <th>event name</th>
+    <th>people</th>
   </tr>
   </thead>
-  <tbody id="result">
+  <tbody id="div_b">
+
+  </tbody>
+</table>
+
+<table>
+  <thead>
+  <tr>
+    <th>id</th>
+    <th>event name</th>
+    <th>people</th>
+  </tr>
+  </thead>
+  <tbody id="div_c">
 
   </tbody>
 </table>
@@ -86,10 +97,11 @@ window.onload = wrap_img;
 <!-- Script is layed out in a sequence (no function) and will execute when page is loaded -->
 <script>
   // prepare HTML result container for new output
-  const resultContainer = document.getElementById("result");
+  const resultContainerB = document.getElementById("div_b");
+  const resultContainerC = document.getElementById("div_c");
 
   // prepare fetch options
-  const url = "https://backend.dnhsscioly.tk/api/student/";
+  const url = "https://backend.dnhsscioly.tk/api/events/";
 
   const options = {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
@@ -114,7 +126,7 @@ window.onload = wrap_img;
           const td = document.createElement("td");
           td.innerHTML = errorMsg;
           tr.appendChild(td);
-          resultContainer.appendChild(tr);
+          resultContainerB.appendChild(tr);
           return;
       }
       // valid response will have json data
@@ -122,43 +134,32 @@ window.onload = wrap_img;
 
 
           for (const row of data) {
-
+            
             const tr = document.createElement("tr");
 
             const id = document.createElement("td");
-            const name = document.createElement("td");
-            const email = document.createElement("td");
-
             const event = document.createElement("td");
-            event.innerHTML = row.event;
-              const event_select = document.createElement("select");
-                var opt = document.createElement("option");
-                opt.value = "anatomy";
-                opt.innerHTML = "anatomy"
-                event_select.appendChild(opt);
-                event.appendChild(event_select);
-
-              const event_button = document.createElement('button');
-                event_button.innerHTML = "submit";
-                event.appendChild(event_button);
-
+            const people = document.createElement("td");
               
             const graduation = document.createElement("td");
-            
+            let division = row.division;
 
             id.innerHTML = row.id;
-            name.innerHTML = row.name;
-            email.innerHTML = row.email;
-            graduation.innerHTML = row.graduatingYear;
+            event.innerHTML = row.name;
+            people.innerHTML = row.people;
 
             tr.appendChild(id);
-            tr.appendChild(name);
-
-            tr.appendChild(email);
+            
             tr.appendChild(event);
-            tr.appendChild(graduation);
+            tr.appendChild(people);
 
-            resultContainer.appendChild(tr);
+            if (division.match("b")) {
+              console.log(division);
+              resultContainerB.appendChild(tr);
+            } else {
+              resultContainerC.appendChild(tr);
+            }
+            
           }
       })
   })
@@ -169,7 +170,7 @@ window.onload = wrap_img;
     const td = document.createElement("td");
     td.innerHTML = err;
     tr.appendChild(td);
-    resultContainer.appendChild(tr);
+    resultContainerB.appendChild(tr);
   });
 </script>
 
