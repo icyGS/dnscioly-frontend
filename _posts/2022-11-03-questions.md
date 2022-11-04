@@ -59,7 +59,7 @@ title: Cool Questions
     }
 </script>
 <html>
-    <div class="container" style="position: absolute; font-size: 40px;color: red; left: 400px">
+    <div class="container" style="position: absolute; font-size: 40px;color: white">
         <label for="number">How many questions do you want? (max = 9)</label>
         <br>
         <input id="number" type="number"/>
@@ -71,7 +71,7 @@ title: Cool Questions
     <br>
     <br>
     <br>
-    <p style="text-align: center; font-size: 40px;color: red;" id="answer"></p>
-    <p style="text-align: center; font-size: 40px;color: red;" id="score"></p>
-    <p style="text-align: center; font-size: 40px;color: red;" id="correct"></p>
+    <p style="text-align: center; font-size: 30px;" id="answer"></p>
+    <p style="text-align: center; font-size: 30px;" id="score"></p>
+    <p style="text-align: center; font-size: 30px;" id="correct"></p>
 </html>
