@@ -198,7 +198,7 @@ window.onload = wrap_img;
       }
 
       function fetchUser(name) {
-        fetch(url, options)
+        fetch("https://backend.dnhsscioly.tk/api/student/")
           // response is a RESTful "promise" on any successful fetch
           .then((response) => {
             // check for response errors
