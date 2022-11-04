@@ -124,7 +124,6 @@ permalink: /data/roster
 
             tr.appendChild(id);
             tr.appendChild(name);
-
             tr.appendChild(email);
             tr.appendChild(phone)
             tr.appendChild(event);

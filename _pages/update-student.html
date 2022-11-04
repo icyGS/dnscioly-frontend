@@ -101,7 +101,14 @@ search_exclude: false
         xhr.send(JSON.stringify(userInfo));
         const form = document.getElementById("updateInfoForm");
         form.reset();
+        fetchUser(userInfo.name).then((user) => {
+          if (user) {
+            tableBuild(user);
+          }
+        });
+      }
 
+      function tableBuild(userInfo) {
         //create table
         const tr = document.createElement("tr");
         const id = document.createElement("td");
@@ -124,6 +131,25 @@ search_exclude: false
 
         const studentDataTable = document.getElementById("updatedStudentTable");
         studentDataTable.appendChild(tr);
+      }
+
+      function fetchUser(name) {
+        return (
+          fetch("https://backend.dnhsscioly.tk/api/student/")
+            // response is a RESTful "promise" on any successful fetch
+            .then((response) => {
+              // check for response errors
+              if (response.status == 200) {
+                return response.json().then((data) => {
+                  for (const user of data) {
+                    if (user.name == name) {
+                      return user;
+                    }
+                  }
+                });
+              }
+            })
+        );
       }
 
       const form = document.getElementById("updateInfoForm");
