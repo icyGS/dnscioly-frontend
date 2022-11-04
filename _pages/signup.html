@@ -20,6 +20,7 @@ search_exclude: false
       }
     </style>
   </head>
+  <!-- registration input fields for new entry in db -->
   <body>
     <form method="POST" id="signupForm">
       <p>
@@ -59,6 +60,7 @@ search_exclude: false
       </p>
       <input value="Submit" type="submit" />
     </form>
+    <!-- table for student information (WPI: meant to be current information but only retrieves old info) -->
     <table id="updatedStudentTable">
       <thead>
         <tr>
@@ -72,6 +74,7 @@ search_exclude: false
       <tbody></tbody>
     </table>
     <script>
+      // on submit, api call sends json for new entry to be created
       function submitform(event) {
         event.preventDefault();
 
@@ -85,13 +88,16 @@ search_exclude: false
         const data = new FormData(event.target);
         const userInfo = Object.fromEntries(data.entries());
 
+        // sets new info (password hasher)
         userInfo.id = null;
         userInfo.event = [];
         userInfo.passwordHash = CryptoJS.MD5(userInfo.password).toString();
 
+        // builds json
         xhr.send(JSON.stringify(userInfo));
         const form = document.getElementById("signupForm");
         form.reset();
+        // fetches user data (not working as intended)
         fetchUser(userInfo.name).then((user) => {
           if (user) {
             tableBuild(user);
@@ -99,6 +105,7 @@ search_exclude: false
         });
       }
 
+      // builds table w/ data called from api
       function tableBuild(userInfo) {
         //create table
         const tr = document.createElement("tr");
@@ -124,6 +131,7 @@ search_exclude: false
         studentDataTable.appendChild(tr);
       }
 
+      // fetches user info
       function fetchUser(name) {
         return (
           fetch("https://backend.dnhsscioly.tk/api/student/")
