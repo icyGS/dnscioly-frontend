@@ -1,7 +1,7 @@
 ---
 layout: default
 description: Testing the use of displaying frontend API
-categories: [markdown,javascript]
+categories: [markdown, javascript]
 comments: true
 title: Roster
 permalink: /data/roster
@@ -13,6 +13,7 @@ permalink: /data/roster
     <th>id</th>
     <th>name</th>
     <th>email</th>
+    <th>phone number<th>
     <th>events</th>
     <th>graduating year</th>
   </tr>
@@ -21,9 +22,6 @@ permalink: /data/roster
 
   </tbody>
 </table>
-
-
-
 
 <!-- Script is layed out in a sequence (no function) and will execute when page is loaded -->
 <script>
@@ -70,6 +68,7 @@ permalink: /data/roster
             const id = document.createElement("td");
             const name = document.createElement("td");
             const email = document.createElement("td");
+            const phone = document.createElement("td");
 
             const event = document.createElement("td");
             event.innerHTML = row.event;
@@ -91,12 +90,14 @@ permalink: /data/roster
             id.innerHTML = row.id;
             name.innerHTML = row.name;
             email.innerHTML = row.email;
+            phone.innerHTML = row.phoneNumber;
             graduation.innerHTML = row.graduatingYear;
 
             tr.appendChild(id);
             tr.appendChild(name);
 
             tr.appendChild(email);
+            tr.appendChild(phone)
             tr.appendChild(event);
             tr.appendChild(graduation);
 

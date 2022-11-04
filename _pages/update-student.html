@@ -14,41 +14,81 @@ search_exclude: false
     <title>Update User Information</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+    <style>
+      .inputText {
+        color: aliceblue;
+      }
+    </style>
   </head>
   <body>
     <form method="POST" id="updateInfoForm">
       <p>
         <label for="currentEmail">Current Email:</label>
-        <input type="text" name="currentEmail" id="currentEmail" />
+        <input
+          type="text"
+          name="currentEmail"
+          id="currentEmail"
+          class="inputText"
+        />
       </p>
       <p>
         <label for="name">Name:</label>
-        <input type="text" name="name" id="name" />
+        <input type="text" name="name" id="name" class="inputText" />
       </p>
       <p>
         <label for="password">Password:</label>
-        <input type="password" name="password" id="password" />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="inputText"
+        />
       </p>
       <p>
         <label for="graduatingYear">Graduating Year:</label>
-        <input type="text" name="graduatingYear" id="graduatingYear" />
+        <input
+          type="text"
+          name="graduatingYear"
+          id="graduatingYear"
+          class="inputText"
+        />
       </p>
       <p>
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email" />
+        <input type="email" name="email" id="email" class="inputText" />
       </p>
       <p>
         <label for="phoneNumber">Phone Number:</label>
-        <input type="text" name="phoneNumber" id="phoneNumber" />
+        <input
+          type="text"
+          name="phoneNumber"
+          id="phoneNumber"
+          class="inputText"
+        />
       </p>
       <input value="Submit" type="submit" />
     </form>
+    <table id="updatedStudentTable">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>email</th>
+          <th>phone number</th>
+          <th>graduating year</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
     <script>
       function submitform(event) {
         event.preventDefault();
 
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://backend.dnhsscioly.tk/api/student/updateStudent/");
+        xhr.open(
+          "PUT",
+          "https://backend.dnhsscioly.tk/api/student/updateStudent/"
+        );
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
         const data = new FormData(event.target);
@@ -61,6 +101,29 @@ search_exclude: false
         xhr.send(JSON.stringify(userInfo));
         const form = document.getElementById("updateInfoForm");
         form.reset();
+
+        //create table
+        const tr = document.createElement("tr");
+        const id = document.createElement("td");
+        const name = document.createElement("td");
+        const email = document.createElement("td");
+        const phone = document.createElement("td");
+        const graduation = document.createElement("td");
+
+        id.innerHTML = userInfo.id;
+        name.innerHTML = userInfo.name;
+        email.innerHTML = userInfo.email;
+        phone.innerHTML = userInfo.phoneNumber;
+        graduation.innerHTML = userInfo.graduatingYear;
+
+        tr.appendChild(id);
+        tr.appendChild(name);
+        tr.appendChild(email);
+        tr.appendChild(phone);
+        tr.appendChild(graduation);
+
+        const studentDataTable = document.getElementById("updatedStudentTable");
+        studentDataTable.appendChild(tr);
       }
 
       const form = document.getElementById("updateInfoForm");
