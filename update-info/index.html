@@ -204,7 +204,7 @@ window.onload = wrap_img;
             .then((response) => {
               // check for response errors
               if (response.status == 200) {
-                response.json().then((data) => {
+                return response.json().then((data) => {
                   for (const user of data) {
                     if (user.name == name) {
                       return user;
