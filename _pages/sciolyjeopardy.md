@@ -69,7 +69,8 @@ permalink: /trivia/
     <br>
     <br>
     <br>
-    <p style="text-align: center; font-size: 40px;color: red;" id="answer"></p>
-    <p style="text-align: center; font-size: 40px;color: red;" id="score"></p>
-    <p style="text-align: center; font-size: 40px;color: red;" id="correct"></p>
+    <p style="text-align: center; font-size: 30px;" id="answer"></p>
+    <p style="text-align: center; font-size: 30px;" id="score"></p>
+    <p style="text-align: center; font-size: 30px;" id="correct"></p>
+    <li style="text-align: center; font-size: 30px;" id="question"></li>
 </html>
