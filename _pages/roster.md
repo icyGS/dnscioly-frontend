@@ -6,14 +6,14 @@ comments: true
 title: Roster
 permalink: /data/roster
 ---
-
+<h1>DNHS 2022 Current Roster</h1>
 <table>
   <thead>
   <tr>
     <th>id</th>
     <th>name</th>
     <th>email</th>
-    <th>phone number<th>
+    <th>phone number</th>
     <th>events</th>
     <th>graduating year</th>
   </tr>
@@ -33,6 +33,17 @@ permalink: /data/roster
 
   const options = {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'omit', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  };
+
+  const putOptions = {
+    method: 'PUT', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
     cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
     credentials: 'omit', // include, *same-origin, omit
@@ -72,15 +83,33 @@ permalink: /data/roster
 
             const event = document.createElement("td");
             event.innerHTML = row.event;
+            event.id = "eventPerson"+row.id;
               const event_select = document.createElement("select");
-                var opt = document.createElement("option");
-                opt.value = "anatomy";
-                opt.innerHTML = "anatomy"
-                event_select.appendChild(opt);
+                fetch("https://backend.dnhsscioly.tk/api/events/", options).then(response => {
+                  response.json().then(eventList => {
+                    for (const row of eventList) {
+                      const opt = document.createElement("option");
+                      opt.innerHTML = row.name;
+                      opt.value = row.name;
+                      event_select.appendChild(opt);
+                    }
+                  })
+                })
+                event_select.id = "select" + row.id;
+                // opt.value = "anatomy";
+                // opt.innerHTML = "anatomy"
+                // event_select.appendChild(opt);
                 event.appendChild(event_select);
 
               const event_button = document.createElement('button');
                 event_button.innerHTML = "submit";
+                event_button.id = "button" + row.id;
+                event_button.onclick = function() {
+                  console.log(event.id);
+                  var selectedValue = document.getElementById(event_select.id).value;
+                  console.log(selectedValue)
+                  addEvent(selectedValue, url + "/addEvent/", id.innerHTML, event.id);
+                };
                 event.appendChild(event_button);
 
               
@@ -114,4 +143,26 @@ permalink: /data/roster
     tr.appendChild(td);
     resultContainer.appendChild(tr);
   });
+
+    function addEvent(event, url, id, elemID) {
+    // fetch the API
+    fetch(url + id + "/" + event, putOptions)
+    // response is a RESTful "promise" on any successful fetch
+    .then(response => {
+      // check for response errors
+      if (response.status !== 200) {
+          error("PUT API response failure: " + response.status)
+          return;  // api failure
+      }
+      // valid response will have JSON data
+      response.json().then(data => {
+          console.log(data);
+          document.getElementById(elemID).innerHTML = data.event;
+      })
+    })
+    // catch fetch errors (ie Nginx ACCESS to server blocked)
+    .catch(err => {
+      error(err + " " + put_url);
+    });
+    }
 </script>
