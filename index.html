@@ -39,6 +39,7 @@ permalink: /home/
         display: block;
       }
 
+      /* Color of the text */
       .txtcolor {
         color: white;
       }
@@ -79,10 +80,12 @@ permalink: /home/
         animation-duration: 1.5s;
       }
 
+      /* Center Alignment */
       .bruh {
         align-content: center;
       }
 
+      /* bg color of active */
       .active {
         background-color: #717171;
       }
@@ -100,6 +103,7 @@ permalink: /home/
     </style>
   </head>
 
+  <!-- Styling for background -->
   <body
     style="
       background-image: linear-gradient(
@@ -117,10 +121,12 @@ permalink: /home/
           class="txtcolor"
           style="text-align: center; text-size-adjust: 10%; font-size: 50px"
         >
+        <!-- Header -->
           Del Norte Science Olympiad
         </a>
       </h1>
       <br />
+      <!-- Below the header text -->
       <h4 class="txtcolor" style="text-align: center">
         Registration for 2022-2023 season is OPEN!! Classes will be held both
         online and in person, depending on your coach's preference.
@@ -152,6 +158,7 @@ permalink: /home/
             />
           </div>
           <br />
+          <!-- Dots below images -->
           <div style="text-align: center">
             <span class="dot"></span>
             <span class="dot"></span>
@@ -182,12 +189,12 @@ permalink: /home/
               for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
               }
-              x[slideIndex - 1].style.display = "block";
+              x[slideIndex - 1].style.display = "block"; // displaying the picture as a type "block"
             }
 
             function showSlides() {
               let i;
-              let slides = document.getElementsByClassName("mySlides");
+              let slides = document.getElementsByClassName("mySlides"); 
               let dots = document.getElementsByClassName("dot");
               for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
@@ -197,13 +204,14 @@ permalink: /home/
                 slideIndex = 1;
               }
               for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
+                dots[i].className = dots[i].className.replace(" active", ""); // cycling through the images
               }
               slides[slideIndex - 1].style.display = "block";
               dots[slideIndex - 1].className += " active";
               setTimeout(showSlides, 5000); // Change image every 5 seconds
             }
           </script>
+          <!-- Sidenav bar -->
           <div class="sidenav">
             <a class="" style="margin-top: 150%" href="{{site.baseurl}}/home"
               >Home<span class="sr-only"></span
