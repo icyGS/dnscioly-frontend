@@ -132,6 +132,7 @@ window.onload = wrap_img;
       </p>
       <input value="Submit" type="submit" />
     </form>
+    <!-- table for student information (WPI: meant to be current information but only retrieves old info) -->
     <table id="updatedStudentTable">
       <thead>
         <tr>
@@ -145,6 +146,7 @@ window.onload = wrap_img;
       <tbody></tbody>
     </table>
     <script>
+      // on submit, api call sends json for updated entry to be sent
       function submitform(event) {
         event.preventDefault();
 
@@ -155,9 +157,11 @@ window.onload = wrap_img;
         );
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
+        // forms data
         const data = new FormData(event.target);
         const userInfo = Object.fromEntries(data.entries());
 
+        //sets user info
         userInfo.id = null;
         userInfo.event = [];
         userInfo.passwordHash = CryptoJS.MD5(userInfo.password).toString();
@@ -172,6 +176,7 @@ window.onload = wrap_img;
         });
       }
 
+      // builds table with information in db
       function tableBuild(userInfo) {
         //create table
         const tr = document.createElement("tr");
@@ -181,12 +186,14 @@ window.onload = wrap_img;
         const phone = document.createElement("td");
         const graduation = document.createElement("td");
 
+        //sets info to collected info
         id.innerHTML = userInfo.id;
         name.innerHTML = userInfo.name;
         email.innerHTML = userInfo.email;
         phone.innerHTML = userInfo.phoneNumber;
         graduation.innerHTML = userInfo.graduatingYear;
 
+        // appends columns to table
         tr.appendChild(id);
         tr.appendChild(name);
         tr.appendChild(email);
@@ -197,6 +204,7 @@ window.onload = wrap_img;
         studentDataTable.appendChild(tr);
       }
 
+      // fetch user information
       function fetchUser(name) {
         return (
           fetch("https://backend.dnhsscioly.tk/api/student/")

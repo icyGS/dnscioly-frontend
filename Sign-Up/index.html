@@ -84,6 +84,7 @@ window.onload = wrap_img;
       }
     </style>
   </head>
+  <!-- registration input fields for new entry in db -->
   <body>
     <form method="POST" id="signupForm">
       <p>
@@ -123,6 +124,7 @@ window.onload = wrap_img;
       </p>
       <input value="Submit" type="submit" />
     </form>
+    <!-- table for student information (WPI: meant to be current information but only retrieves old info) -->
     <table id="updatedStudentTable">
       <thead>
         <tr>
@@ -136,6 +138,7 @@ window.onload = wrap_img;
       <tbody></tbody>
     </table>
     <script>
+      // on submit, api call sends json for new entry to be created
       function submitform(event) {
         event.preventDefault();
 
@@ -149,13 +152,16 @@ window.onload = wrap_img;
         const data = new FormData(event.target);
         const userInfo = Object.fromEntries(data.entries());
 
+        // sets new info (password hasher)
         userInfo.id = null;
         userInfo.event = [];
         userInfo.passwordHash = CryptoJS.MD5(userInfo.password).toString();
 
+        // builds json
         xhr.send(JSON.stringify(userInfo));
         const form = document.getElementById("signupForm");
         form.reset();
+        // fetches user data (not working as intended)
         fetchUser(userInfo.name).then((user) => {
           if (user) {
             tableBuild(user);
@@ -163,6 +169,7 @@ window.onload = wrap_img;
         });
       }
 
+      // builds table w/ data called from api
       function tableBuild(userInfo) {
         //create table
         const tr = document.createElement("tr");
@@ -188,6 +195,7 @@ window.onload = wrap_img;
         studentDataTable.appendChild(tr);
       }
 
+      // fetches user info
       function fetchUser(name) {
         return (
           fetch("https://backend.dnhsscioly.tk/api/student/")
