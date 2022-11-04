@@ -13,7 +13,7 @@ permalink: /data/roster
     <th>id</th>
     <th>name</th>
     <th>email</th>
-    <th>phone number<th>
+    <th>phone number</th>
     <th>events</th>
     <th>graduating year</th>
   </tr>
@@ -95,7 +95,6 @@ permalink: /data/roster
 
             tr.appendChild(id);
             tr.appendChild(name);
-
             tr.appendChild(email);
             tr.appendChild(phone)
             tr.appendChild(event);
