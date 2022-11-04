@@ -97,7 +97,7 @@
   
       ,"page7": {
           "title": "Trivia Game",
-          "content": "How many questions do you want? Submit . . . .",
+          "content": "How many questions do you want? Submit . . . | .",
           "url": "https://icygs.github.io/dnscioly-frontend/trivia/",
           "relUrl": "/trivia/",
           "date": ""
