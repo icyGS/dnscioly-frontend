@@ -323,7 +323,7 @@ table td { border: 1px solid #e8e8e8; }
 /*--- IMPORT STYLES FOR FASTPAGES ---*/
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
-html, body, input, textarea, select, button { color: rgba(255, 255, 255, 0.87) !important; background-color: #1d1838 !important; }
+html, body, input, textarea, select, button { color: rgba(255, 255, 255, 0.87) !important; background-image: linear-gradient(to right, #313fd4, #0e8457); }
 
 * { transition-property: all; transition-duration: 0.2s; transition-timing-function: ease-in-out; }
 
