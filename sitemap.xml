@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://icygs.github.io/dnscioly-frontend/2020/10/31/trivia.ipynb</loc>
+<lastmod>2020-10-31T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>https://icygs.github.io/dnscioly-frontend/markdown/2022/10/31/halloween.html</loc>
 <lastmod>2022-10-31T00:00:00-05:00</lastmod>
 </url>
@@ -48,10 +52,10 @@
 </url>
 <url>
 <loc>https://icygs.github.io/dnscioly-frontend/_pages/search.html</loc>
-<lastmod>2022-11-04T11:57:25-05:00</lastmod>
+<lastmod>2022-11-04T12:04:59-05:00</lastmod>
 </url>
 <url>
 <loc>https://icygs.github.io/dnscioly-frontend/_pages/tags.html</loc>
-<lastmod>2022-11-04T11:57:25-05:00</lastmod>
+<lastmod>2022-11-04T12:04:59-05:00</lastmod>
 </url>
 </urlset>

@@ -44,6 +44,17 @@
         
     
   
+    
+        ,"post4": {
+            "title": "Trivia",
+            "content": "{ “cells”: [ { “cell_type”: “markdown”, “metadata”: {}, “source”: [ “— n”, “toc: true n”, “layout: post n”, “description: Please use lowercase words in your answers. Number answers are in number form. n”, “categories: [markdown] n”, “title: Cool Questions n”, “—” ] }, { “cell_type”: “code”, “execution_count”: null, “metadata”: {}, “outputs”: [], “source”: [ “ n”, “ n”, “&lt;html&gt; n”, “ &lt;div class=&quot;container&quot; style=&quot;position: absolute; font-size: 40px;color: red; left: 400px&quot;&gt; n”, “ &lt;label for=&quot;number&quot;&gt;How many questions do you want? (max = 9)&lt;/label&gt; n”, “ n”, “ &lt;input id=&quot;number&quot; type=&quot;number&quot;/&gt; n”, “ &lt;button onclick=&quot;QNA(document.getElementById(‘number’).value)&quot;&gt;Submit&lt;/button&gt; n”, “ &lt;/div&gt; n”, “ n”, “ n”, “ n”, “ n”, “ n”, “ n”, “ &lt;p style=&quot;text-align: center; font-size: 40px;color: red;&quot; id=&quot;answer&quot;&gt;&lt;/p&gt; n”, “ &lt;p style=&quot;text-align: center; font-size: 40px;color: red;&quot; id=&quot;score&quot;&gt;&lt;/p&gt; n”, “ &lt;p style=&quot;text-align: center; font-size: 40px;color: red;&quot; id=&quot;correct&quot;&gt;&lt;/p&gt; n”, “&lt;/html&gt;” ] } ], “metadata”: { “kernelspec”: { “display_name”: “Java”, “language”: “java”, “name”: “java” }, “language_info”: { “name”: “java” }, “orig_nbformat”: 4 }, “nbformat”: 4, “nbformat_minor”: 2 } .",
+            "url": "https://icygs.github.io/dnscioly-frontend/2020/10/31/trivia.ipynb",
+            "relUrl": "/2020/10/31/trivia.ipynb",
+            "date": " • Oct 31, 2020"
+        }
+        
+    
+  
 
   
   
