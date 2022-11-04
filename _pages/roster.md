@@ -102,7 +102,7 @@ permalink: /data/roster
                 event.appendChild(event_select);
 
               const event_button = document.createElement('button');
-                event_button.innerHTML = "submit";
+                event_button.innerHTML = "add";
                 event_button.id = "button" + row.id;
                 event_button.onclick = function() {
                   console.log(event.id);

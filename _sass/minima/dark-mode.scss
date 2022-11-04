@@ -9,7 +9,11 @@ $overlay-light: mix($dark-grey, white, 86%);
 
 html, body, input, textarea, select, button {   
   color: $high-emph !important;
-  background-color: $dark-grey !important;
+  background-image: linear-gradient(
+        to right,
+        rgb(49, 63, 212),
+        rgb(14, 132, 87)
+      );
 }
 
 * {
