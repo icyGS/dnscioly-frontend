@@ -134,20 +134,22 @@ search_exclude: false
       }
 
       function fetchUser(name) {
-        fetch("https://backend.dnhsscioly.tk/api/student/")
-          // response is a RESTful "promise" on any successful fetch
-          .then((response) => {
-            // check for response errors
-            if (response.status == 200) {
-              response.json().then((data) => {
-                for (const user of data) {
-                  if (user.name == name) {
-                    return user;
+        return (
+          fetch("https://backend.dnhsscioly.tk/api/student/")
+            // response is a RESTful "promise" on any successful fetch
+            .then((response) => {
+              // check for response errors
+              if (response.status == 200) {
+                response.json().then((data) => {
+                  for (const user of data) {
+                    if (user.name == name) {
+                      return user;
+                    }
                   }
-                }
-              });
-            }
-          });
+                });
+              }
+            })
+        );
       }
 
       const form = document.getElementById("updateInfoForm");
