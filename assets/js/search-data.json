@@ -88,7 +88,7 @@
   
       ,"page7": {
           "title": "Roster",
-          "content": "id name email phone number events graduating year .",
+          "content": "DNHS 2022 Current Roster . id name email phone number events graduating year .",
           "url": "https://icygs.github.io/dnscioly-frontend/data/roster",
           "relUrl": "/data/roster",
           "date": ""
