@@ -1,0 +1,94 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {%- include head.html -%}
+  <body>
+    {%- include header.html -%}
+    
+    <style>
+      .topbar{
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(65, 132, 233, 0.531);
+        border-color: white;
+        border: 10px;
+        width: 1000px;
+        height: 50px;
+        border-radius: 0px 0px 20px 20px;
+        border-color: white;
+      }
+      .homeBut{
+        float: left;
+        margin-top: 8px;
+        padding-left: 10px;
+      }
+      .homeButton {
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+      }
+      .buttons {
+        padding-right: 40px;
+        text-align: center;
+      }
+      .option {
+        float: center;
+        background-color: rgb(189, 214, 255) !important;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+      .option:hover {
+        background-color: rgb(57, 84, 117) !important;
+        border-radius: 10px;
+      }
+    </style>
+
+    <div class="topbar">
+      <div class="homeBut">
+        <img class="homeButton"src="{{site.baseurl}}/images/home.png" onclick="home()">
+      </div>
+      <div class="buttons">
+        <button class="option" href="{{site.baseurl}}/dashboard" onclick="dash()">Dashboard</button>
+        <button class="option" href="{{site.baseurl}}/calendar" onclick="cal()">Calendar</button>
+        <button class="option" href="{{site.baseurl}}/" onclick="inbox()">Inbox</button>
+        <button class="option" href="{{site.baseurl}}/" onclick="events()">Events</button>
+        <button class="option" href="{{site.baseurl}}/" onclick="roster()">Roster</button>
+        <button class="option" href="{{site.baseurl}}/" onclick="signUp()">Sign Up</button>
+      </div>
+    </div>
+
+    <script>
+      function home() {
+        window.location.href = "{{site.baseurl}}/";
+      }
+      function cal() {
+        window.location.href = "{{site.baseurl}}/calendar";
+      }
+      function dash() {
+        window.location.href = "{{site.baseurl}}/dashboard";
+      }
+      function inbox() {
+        window.location.href = "{{site.baseurl}}/";
+      }
+      function events() {
+        window.location.href = "{{site.baseurl}}/data/events";
+      }
+      function roster() {
+        window.location.href = "{{site.baseurl}}/data/roster";
+      }
+      function signUp() {
+        window.location.href = "{{site.baseurl}}/Sign-Up/";
+      }
+    </script>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+    {%- include footer.html -%}
+  </body>
+</html>

@@ -1,7 +1,6 @@
 ---
 layout: default
 permalink: /Sign-Up/
-title: Sign Up
 search_exclude: false
 ---
 
@@ -59,7 +58,13 @@ search_exclude: false
         />
       </p>
       <input value="Submit" type="submit" />
+    <br>
+    <br>
+      <p>
+        If you need to update your information, click here: <input onclick="window.location.href='{{site.baseurl}}/update-info/'" style="cursor: pointer; width: 90px;text-align: center; border-color: black;" value="Info. Update">
+      </p>
     </form>
+    <br>
     <!-- table for student information (WPI: meant to be current information but only retrieves old info) -->
     <table id="updatedStudentTable">
       <thead>

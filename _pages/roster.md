@@ -3,7 +3,6 @@ layout: default
 description: Testing the use of displaying frontend API
 categories: [markdown, javascript]
 comments: true
-title: Roster
 permalink: /data/roster
 ---
 <h1>DNHS 2022 Current Roster</h1>

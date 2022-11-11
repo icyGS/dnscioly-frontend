@@ -3,7 +3,6 @@ layout: default
 description: Testing the use of displaying frontend API
 categories: [markdown,javascript]
 comments: true
-title: Events
 permalink: /data/events
 ---
 <h1>Event lists</h1>
