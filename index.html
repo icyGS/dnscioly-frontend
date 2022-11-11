@@ -66,10 +66,86 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/dnscioly-frontend/about/">About Del Norte</a><a class="page-link" href="/dnscioly-frontend/calendar/">Calendar</a><a class="page-link" href="/dnscioly-frontend/dashboard/">Dashboard</a><a class="page-link" href="/dnscioly-frontend/data/events">Events</a><a class="page-link" href="/dnscioly-frontend/redirect-home/">Home</a><a class="page-link" href="/dnscioly-frontend/data/roster">Roster</a><a class="page-link" href="/dnscioly-frontend/trivia/">Trivia Game</a><a class="page-link" href="/dnscioly-frontend/Sign-Up/">Sign Up</a><a class="page-link" href="/dnscioly-frontend/update-info/">Update User Information</a></div>
+        <div class="trigger"><a class="page-link" href="/dnscioly-frontend/trivia/">Trivia Game</a><a class="page-link" href="/dnscioly-frontend/about/">About Del Norte</a></div>
       </nav></div>
 </header>
-<main class="page-content" aria-label="Content">
+<style>
+      .topbar{
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(65, 132, 233, 0.531);
+        border-color: white;
+        border: 10px;
+        width: 1000px;
+        height: 50px;
+        border-radius: 0px 0px 20px 20px;
+        border-color: white;
+      }
+      .homeBut{
+        float: left;
+        margin-top: 8px;
+        padding-left: 10px;
+      }
+      .homeButton {
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+      }
+      .buttons {
+        padding-right: 40px;
+        text-align: center;
+      }
+      .option {
+        float: center;
+        background-color: rgb(189, 214, 255) !important;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+      .option:hover {
+        background-color: rgb(57, 84, 117) !important;
+        border-radius: 10px;
+      }
+    </style>
+
+    <div class="topbar">
+      <div class="homeBut">
+        <img class="homeButton"src="/dnscioly-frontend/images/home.png" onclick="home()">
+      </div>
+      <div class="buttons">
+        <button class="option" href="/dnscioly-frontend/dashboard" onclick="dash()">Dashboard</button>
+        <button class="option" href="/dnscioly-frontend/calendar" onclick="cal()">Calendar</button>
+        <button class="option" href="/dnscioly-frontend/" onclick="inbox()">Inbox</button>
+        <button class="option" href="/dnscioly-frontend/" onclick="events()">Events</button>
+        <button class="option" href="/dnscioly-frontend/" onclick="roster()">Roster</button>
+        <button class="option" href="/dnscioly-frontend/" onclick="signUp()">Sign Up</button>
+      </div>
+    </div>
+
+    <script>
+      function home() {
+        window.location.href = "/dnscioly-frontend/";
+      }
+      function cal() {
+        window.location.href = "/dnscioly-frontend/calendar";
+      }
+      function dash() {
+        window.location.href = "/dnscioly-frontend/dashboard";
+      }
+      function inbox() {
+        window.location.href = "/dnscioly-frontend/";
+      }
+      function events() {
+        window.location.href = "/dnscioly-frontend/data/events";
+      }
+      function roster() {
+        window.location.href = "/dnscioly-frontend/data/roster";
+      }
+      function signUp() {
+        window.location.href = "/dnscioly-frontend/Sign-Up/";
+      }
+    </script>
+
+    <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <div class="home"><html>
   <head>
@@ -78,41 +154,9 @@ window.onload = wrap_img;
         font-family: "Lato", sans-serif;
       }
 
-      /* Margin for styling according to nav */
-      .main {
-        margin-left: 180px; /* Same as the width of the sidenav */
-      }
-
-      /* Actual block of navbar */
-      .sidenav {
-        height: 100%;
-        width: 185px;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: rgb(56, 121, 219);
-        overflow-x: hidden;
-        padding-top: 20px;
-      }
-
-      /* Navbar Links/Items */
-      .sidenav a {
-        padding: 6px 6px 6px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #ffffff;
-        display: block;
-      }
-
       /* Color of the text */
       .txtcolor {
         color: white;
-      }
-
-      /* Hover options for links */
-      .sidenav a:hover {
-        color: #aaaab1;
       }
 
       /* The dots/bullets/indicators */
@@ -124,16 +168,6 @@ window.onload = wrap_img;
         border-radius: 50%;
         display: inline-block;
         transition: background-color 0.6s ease;
-      }
-
-      /* styling according to screen */
-      @media screen and (max-height: 450px) {
-        .sidenav {
-          padding-top: 15px;
-        }
-        .sidenav a {
-          font-size: 18px;
-        }
       }
 
       /* Logo Styling mainly */
@@ -170,13 +204,7 @@ window.onload = wrap_img;
   </head>
 
   <!-- Styling for background -->
-  <body style="
-      background-image: linear-gradient(
-        to right,
-        rgb(49, 63, 212),
-        rgb(14, 132, 87)
-      );
-    ">
+  <body>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Beginning of main body -->
     <div class="main">
@@ -260,13 +288,6 @@ window.onload = wrap_img;
               setTimeout(showSlides, 5000); // Change image every 5 seconds
             }
           </script>
-          <!-- Sidenav bar -->
-          <div class="sidenav">
-            <a class="" style="margin-top: 150%" href="/dnscioly-frontend/home">Home<span class="sr-only"></span></a>
-            <a class="" href="/dnscioly-frontend/calendar">Calendar<span class="sr-only"></span></a>
-            <a class="" href="/dnscioly-frontend/dashboard">Dashboard<span class="sr-only"></span></a>
-            <a class="" href="/dnscioly-frontend/">Inbox<span class="sr-only"></span></a>
-          </div>
         </div>
       </h4>
     </div>
@@ -291,7 +312,7 @@ window.onload = wrap_img;
 
    <!-- Assemble final sorted posts array -->
   
-  <ul class="post-list" style="margin-left:24%"><li><div class="Box box-shadow-medium rounded-1 col-12"><div class="col-8 d-table-cell p-3">
+  <ul class="post-list"><li><div class="Box box-shadow-medium rounded-1 col-12"><div class="col-8 d-table-cell p-3">
         <h3>
           <a class="post-link" href="/dnscioly-frontend/markdown/2022/12/25/christmas.html">
             Merry Christmas
@@ -367,5 +388,4 @@ window.onload = wrap_img;
 
 </footer>
 </body>
-
 </html>

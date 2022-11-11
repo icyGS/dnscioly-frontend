@@ -58,6 +58,15 @@
 
   
   
+      ,"page0": {
+          "title": "Trivia Game",
+          "content": "How many questions do you want? Submit . . . | .",
+          "url": "https://icygs.github.io/dnscioly-frontend/trivia/",
+          "relUrl": "/trivia/",
+          "date": ""
+      }
+      
+  
 
   
       ,"page1": {
@@ -71,8 +80,10 @@
   
 
   
-      ,"page2": {
-          "title": "Calendar",
+
+  
+      ,"page3": {
+          "title": "",
           "content": "Official DNHS Science Olympiad Calendar .",
           "url": "https://icygs.github.io/dnscioly-frontend/calendar/",
           "relUrl": "/calendar/",
@@ -82,8 +93,8 @@
   
 
   
-      ,"page3": {
-          "title": "Dashboard",
+      ,"page4": {
+          "title": "",
           "content": "&lt;!DOCTYPE html&gt; . Dashboard . Dashboard . To Home Login . Username: Password: .",
           "url": "https://icygs.github.io/dnscioly-frontend/dashboard/",
           "relUrl": "/dashboard/",
@@ -93,8 +104,8 @@
   
 
   
-      ,"page4": {
-          "title": "Events",
+      ,"page5": {
+          "title": "",
           "content": "Event lists . B division events . id event name people . C division events . id event name people .",
           "url": "https://icygs.github.io/dnscioly-frontend/data/events",
           "relUrl": "/data/events",
@@ -106,10 +117,8 @@
   
 
   
-
-  
       ,"page7": {
-          "title": "Roster",
+          "title": "",
           "content": "DNHS 2022 Current Roster . id name email phone number events graduating year .",
           "url": "https://icygs.github.io/dnscioly-frontend/data/roster",
           "relUrl": "/data/roster",
@@ -119,26 +128,15 @@
   
 
   
-      ,"page8": {
-          "title": "Trivia Game",
-          "content": "How many questions do you want? Submit . . . | .",
-          "url": "https://icygs.github.io/dnscioly-frontend/trivia/",
-          "relUrl": "/trivia/",
-          "date": ""
-      }
-      
   
 
   
   
 
   
-  
-
-  
-      ,"page11": {
-          "title": "Sign Up",
-          "content": "&lt;!DOCTYPE html&gt; . Sign Up . Name: . Password: . Graduating Year: . Old Email: . Phone Number: . id name email phone number graduating year . .",
+      ,"page10": {
+          "title": "",
+          "content": "&lt;!DOCTYPE html&gt; . Sign Up . Name: . Password: . Graduating Year: . Old Email: . Phone Number: . If you need to update your information, click here: . id name email phone number graduating year . .",
           "url": "https://icygs.github.io/dnscioly-frontend/Sign-Up/",
           "relUrl": "/Sign-Up/",
           "date": ""
@@ -147,8 +145,8 @@
   
 
   
-      ,"page12": {
-          "title": "Update User Information",
+      ,"page11": {
+          "title": "",
           "content": "&lt;!DOCTYPE html&gt; . Update User Information . Current Email: . Name: . Password: . Graduating Year: . Email: . Phone Number: . id name email phone number graduating year . .",
           "url": "https://icygs.github.io/dnscioly-frontend/update-info/",
           "relUrl": "/update-info/",
@@ -167,7 +165,7 @@
   
 
   
-      ,"page16": {
+      ,"page15": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://icygs.github.io/dnscioly-frontend/robots.txt",
